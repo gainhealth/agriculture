@@ -1,0 +1,135 @@
+<!-- step types -->
+<script id="part" type="text/template">
+  <section class="part {{ className }} cf" id="{{ id }}">
+  </section>
+</script>
+
+<script id="section" type="text/template">
+  <section class="section {{ className }}" id="{{ id }}">
+  </section>
+</script>
+
+<script id="question" type="text/template">
+  <fieldset class="question {{ className }}" id="{{ id }}">
+  </fieldset>
+</script>
+<script id="items" type="text/template">
+  <div class="items"></div>
+</script>
+
+<!-- headers -->
+<script id="title" type="text/template">
+<header class="overview">
+  <h1 class="title">{{ title }}</h1>
+</header>
+</script>
+
+<script id="num" type="text/template">
+<span class="num">{{ num }}&nbsp;</span>
+</script>
+
+<script id="subtitle" type="text/template">
+<p class="subtitle">{{ subtitle }}</p>
+</script>
+
+<script id="description" type="text/template">
+<div class="description">
+  {{ description }}
+</div>
+</script>
+
+<script id="instructions" type="text/template">
+&nbsp;<em class="instructions">{{ instructions }}</em>
+</script>
+
+<script id="prompts" type="text/template">
+<div class="description">
+<h2>Prompts</h2>
+<ul class="prompts">
+</ul>
+</div>
+</script>
+<script id="prompt" type="text/template">
+<li>{{ prompt }}</li>
+</script>
+
+<!-- item types -->
+<script id="text" type="text/template">
+  <div data-id="{{ id }}">
+    <label for="{{ id }}">{{ label }}</label>
+    <textarea id="{{ id }}" type="text" value="{{ value }}" disabled="disabled"></textarea>
+  </div>
+</script>
+<script id="input" type="text/template">
+  <div data-id="{{ id }}" data-required="{{ required }}">
+    <label for="{{ id }}">{{ label }}</label>
+    <input id="{{ id }}" type="text" value="{{ value }}">
+  </div>
+</script>
+<script id="checkbox" type="text/template">
+  <div data-id="{{ id }}" data-required="{{ required }}">
+    <input id="{{ id }}" type="checkbox" {{ value }}>
+    <label for="{{ id }}">{{ label }}</label>
+  </div>
+</script>
+<script id="textarea" type="text/template">
+  <div data-id="{{ id }}" data-required="{{ required }}">
+    <label for="{{ id }}">{{ label }}</label>
+    <textarea id="{{ id }}">{{ value }}</textarea>
+  </div>
+</script>
+<script id="radio" type="text/template">
+  <div data-id="{{ id }}" data-required="{{ required }}" data-type="radio">
+  </div>
+</script>
+<script id="radio_label" type="text/template">
+  <h1 class="title">{{ title }}</h1>
+</script>
+
+<!-- the id pattern for an option is important:  item.type + '_option' -->
+<script id="radio_option" type="text/template"> 
+  <label for="{{ id }}">{{ answer }}</label>
+  <input id="{{ id }}" name="{{ name }}" type="radio" data-next="{{ next }}" {{ value }}>
+</script>
+<script id="select" type="text/template">
+  <div data-id="{{ id }}" data-required="{{ required }}">
+    <label for="{{ id }}">{{ label }}</label>
+    <select id="{{ id }}">
+    </select>
+  </div>
+</script>
+<script id="select_option" type="text/template"> 
+  <option value="{{ value }}" {{ selected }} data-next="{{ next }}">{{ answer }}</option>
+</script>
+
+<!-- labelling sections -->
+<script id="overview" type="text/template">
+  <header class="overview">
+    <h2 class="title"><span class="num">{{ num }}</span> {{ title }}</h2>
+    <p class="subtitle">{{ subtitle }}</p>
+  </header>
+</script>
+
+<!-- Buttons -->
+<script id="next" type="text/template">
+  <input type="submit" value="{{ buttonText }}" data-id="{{ id }}" data-next="{{ next }}">
+</script>
+
+<!-- Messages -->
+<script id="warning" type="text/template">
+  <div class="warning">
+    <p>{{ warning }}</p>
+  </div>
+</script>
+
+<!-- Survey UI Components -->
+<script id="survey_select" type="text/template">
+  <select class="surveys" name="select">
+  </select>
+</script>
+<script id="survey_select_option" type="text/template">
+  <option value="{{ value }}">{{ display }}</option> 
+</script>
+<script id="survey_select_option_default" type="text/template">
+  <option value="">Untitled Survey</option> 
+</script>
