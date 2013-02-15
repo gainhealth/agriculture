@@ -61,9 +61,15 @@ body {
   z-index: 200;
 }
 .question {
+  /* white border to prevent vertical jog on shut - see .question.shut */
+  border-top: 2px solid #fff;
   margin-bottom:2em;
   z-index: 100;
 }
+.survey-complete .question{
+  border-top-color:#c3e29c;
+}
+
 .section:last-of-type {
   border-bottom: none;
 }
@@ -365,31 +371,24 @@ textarea{
   SHOW HIDE
 */
 
-.part,
-.section,
-.question,
-.items {
-  max-height:8000em;
-}
-
 .shut .section,
 .shut .question,
 .shut .items{
-  max-height: 0em;
-  overflow : hidden;
-  -webkit-transition : max-height 0.7s ease;
-  -moz-transition : max-height 0.7s ease;
-  -o-transition : max-height 0.7s ease;
-  transition : max-height 0.7s ease;
+  display: none;
 }
 
-.section.shut {
-  overflow:hidden; 
-}
-.question.shut{
+.section.shut, .question.shut {
   overflow:hidden;
-  border-top: 2px solid #d5d5d7;
 }
+/*
+.question[data-complete] {
+  border-top-color: #d5d5d7;
+  border-bottom: 2px solid #d5d5d7;
+}
+.question.shut {
+  border-bottom-width:0;
+}
+*/
 
 .shut [type="submit"],
 .shut .description{
@@ -419,7 +418,6 @@ textarea{
 .part.shut {
   margin-bottom: 0;
   padding-bottom: 0;
-  padding-top: 1em;
 }
 
 .shut .section,
@@ -443,17 +441,13 @@ textarea{
   background-color:#b7b9ba;
   color:white;
   font-size:1.8em;
-}
-
-
-.section.shut .toggle,
-.question.shut .toggle {
-  top: 0.6em;
+  padding:0;
+  text-align: center;
 }
 
 /************/
 
-[tabindex='-1']:focus{
+[tabindex="-1"]:focus{
   outline:none;
 }
 

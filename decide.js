@@ -5,7 +5,7 @@ var tim   = function(){var e=/{{\s*([a-z0-9_][\\.a-z0-9_]*)\s*}}/gi;return funct
 
 // Decide module
 
-var Decide = (function (window, document) {
+var Decide = (function (window, document, console) {
   'use strict';
 
   // ---------------------------------------------------
@@ -33,6 +33,7 @@ var Decide = (function (window, document) {
 
   function Decide (container, steps, templates, options) {
     var decide                 = this;
+    this.version               = '0.1';
     this.events                = jQuery({});
     this.steps                 = null;
     this.firstStep             = null;
@@ -185,7 +186,7 @@ var Decide = (function (window, document) {
 
     getFirstStep: function () {
       for (var i = 0; i < this.steps.length; i++) {
-        if (!this.steps[i].detached) {
+        if (!this.steps[i].detached && !this.steps[i].metadata) {
           return this.steps[i];
         }
       }
@@ -285,6 +286,9 @@ var Decide = (function (window, document) {
     this.steps     = steps;
     this.firstStep = firstStep;
 
+    // Cache object for evaluated step values
+    
+
     this.loadState(null);
   }
 
@@ -293,10 +297,11 @@ var Decide = (function (window, document) {
     // Set model state
 
     loadState: function (surveyId) {
-      this.surveyId  = (surveyId) ? surveyId
-                                  : this.cache.getLatestSurveyId()  || null;
-      this.history   = this.cache.getSurveyHistory(this.surveyId)   || [];
-      this.responses = this.cache.getSurveyResponses(this.surveyId) || {};
+      this.surveyId        = (surveyId) ? surveyId
+                                  : this.cache.getLatestSurveyId()        || null;
+      this.history         = this.cache.getSurveyHistory(this.surveyId)   || [];
+      this.responses       = this.cache.getSurveyResponses(this.surveyId) || {};
+      this.evaluatedValues = this.cache.getEvaluatedValues(this.surveyId) || {};
     },
 
     // Set model state to fresh copy
@@ -594,6 +599,7 @@ var Decide = (function (window, document) {
       jQuery.each(step, function (property, value) {
         if (typeof value === 'function') {
           survey.evaluateProperty(step, property, value);
+          survey.evaluatedValues[step.id] = step[property];
         }
       });
 
@@ -602,6 +608,7 @@ var Decide = (function (window, document) {
       jQuery.each(step.items || [], function (i, item) {
         if (typeof item.value === 'function') {
           survey.evaluateProperty(item, 'value', item.value);
+          survey.evaluatedValues[item.id] = item['value'];
         }
       });
     },
@@ -627,9 +634,11 @@ var Decide = (function (window, document) {
     evaluateProperty: function (obj, property, fn) {
       var outcome = '';
       try {
-        outcome = fn(obj, this.responses, this.any, this.all, this.getAnswer);
+        outcome = fn(obj, this.responses, this.any, this.all, this.evaluatedValues);
       } catch (e) {
-        console.log('Error when evaluating a function property for object: ' + obj);
+        if (window.console){
+          window.console.log('Error when evaluating a function property for object: ' + obj);
+        }
       }
       obj[property] = outcome;
     },
@@ -739,6 +748,7 @@ var Decide = (function (window, document) {
       if (this.surveyId) {
         this.cache.setSurveyHistory(this.surveyId, this.history);
         this.cache.setSurveyResponses(this.surveyId, this.responses);
+        this.cache.setEvaluatedValues(this.surveyId, this.evaluatedValues);
         this.events.trigger('survey.save', {when: new Date()});
       }
     },
@@ -849,10 +859,6 @@ var Decide = (function (window, document) {
         }
       }
       return !foundFalse;
-    },
-
-    getAnswer: function (id) {
-
     }
 
   };
@@ -957,6 +963,7 @@ var Decide = (function (window, document) {
       this.surveyData.remove(surveyId + 'steps');
       this.surveyData.remove(surveyId + 'history');
       this.surveyData.remove(surveyId + 'responses');
+      this.surveyData.remove(surveyId + 'evaluatedValues');
       this.surveyData.remove(surveyId + 'thirdPartyId', "");
     },
 
@@ -990,6 +997,13 @@ var Decide = (function (window, document) {
       return this.surveyData.get(surveyId + 'history');
     },
     
+    // Returns an object map of the evaluatedValues for a step properties or 
+    // item values
+
+    getEvaluatedValues: function (surveyId) {
+      return this.surveyData.get(surveyId + 'evaluatedValues');
+    },
+
     // Returns an id to be used by any third party (e.g. storage) service
     getThirdPartyId: function (surveyId) {
       return this.surveyData.get(surveyId + 'thirdPartyId');
@@ -1023,7 +1037,13 @@ var Decide = (function (window, document) {
     setSurveyHistory: function (surveyId, history) {
       this.surveyData.set(surveyId + 'history', history);
     },
+
+    // Set the specific survey's evaluatedValues (via surveyId) object map
     
+    setEvaluatedValues: function (surveyId, evaluatedValues) {
+      this.surveyData.set(surveyId + 'evaluatedValues', evaluatedValues);
+    },
+
     // Adds an id to be used by any third party (e.g. storage) service
     setThirdPartyId: function (surveyId, thirdPartyId) {
       this.surveyData.set(surveyId + 'thirdPartyId', thirdPartyId);
@@ -1339,7 +1359,7 @@ var Decide = (function (window, document) {
 
     // Looks through the mini 'form' for this step 
     // and compiles the response array of objects
-    // response format: [{ id "2.1.1", value : "Yes" }]
+    // response format: [{ id "2.1.1", value : "Yes" }, ...]
     compileResponse : function compileResponse(button, response){    
       var surveyView = this;
       
@@ -1412,21 +1432,39 @@ var Decide = (function (window, document) {
 
     // RENDERING
 
+    offsetY: function(target){
+      var top = 0;
+     
+      while (target && target !== document.body){
+        if (target.offsetTop){
+          top += target.offsetTop;
+        }
+        target = target.offsetParent;
+      }
+      return top;
+    },
+     
+    scrollToY: function(target){
+      var top = this.offsetY(target);
+      window.scrollTo(window.scrollX, top);
+      return top;
+    },
+
     // Renders a step into a parent jQuery collection
     
     renderStep: function renderStep(step) {
-      var html = "",
+      var decide = this,
           items = step.items,
           steps = step.steps,
           parent = step.parent ? jQuery("#" + this.formatId(step.parent)) : null, 
           container = this.container,
           thisStep = step,
           $detachedStep = jQuery('.detached'),
-          prevStep,  $thisStep;
+          prevStep, $thisStep, $html, $control;
       
       // Add outer container
-      html = jQuery(this.renderItem(step));
-      prevStep = html;
+      $html = jQuery(this.renderItem(step));
+      prevStep = $html;
       
       // move through, render and append all child steps in order
       while(steps){
@@ -1454,10 +1492,10 @@ var Decide = (function (window, document) {
       // aka: If there are detached steps on the page and the current step is 
       // not a detached step and the oldest ancestor
       if ($detachedStep.length > 0 && !step.detached && !step.parent) {
-        jQuery(html).insertBefore($detachedStep.first());
+        $html.insertBefore($detachedStep.first());
       }
       else {
-        container.append(html);
+        container.append($html);
       }
       
       // ensure custom html has updated values
@@ -1466,8 +1504,17 @@ var Decide = (function (window, document) {
       if(step.detached){
         this.markStepComplete(step.id);
       }else{
+        /* TODO: don't do this until last step on init */
+
+        $control = $html.find(':input:visible:enabled:first, [tabindex="-1"]').first();
+
         // set focus on on first form element
-        jQuery(html).find(':input:visible:enabled:first, [tabindex="-1"]').first().focus();
+        $control.focus();
+
+        // scroll to the top of the step
+        window.setTimeout(function(){
+          decide.scrollToY($html[0]);
+        }, 4);
       }
     },
     
@@ -1878,4 +1925,4 @@ var Decide = (function (window, document) {
 
   return Decide;
   
-}(window, document));
+}(window, document, this.console || {log:function(){}}));
