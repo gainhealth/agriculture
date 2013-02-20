@@ -1,4 +1,12 @@
 Decide.STEP_DATA = [  
+  { 
+    "metadata" : {
+      "version" :   {
+        "data" : "0.2",
+        "decide" : "0.2"
+      }
+    }
+  },
   {
     "id": "Notes",
     "num": "My Notes",
@@ -35,7 +43,7 @@ Decide.STEP_DATA = [
   },
   {
     "id":"Acknowledgements",
-    "num": "Ackgt.",
+    "num": "Acknowledgt.",
     "type" : "part",
     "title":"Acknowledgements",
     "description":"This Rapid Assessment Tool has been produced by the Global Alliance for Improved Nutrition (GAIN) and the Institute of Development Studies (IDS) in the UK. Its production was financed by USAID.\n\nThe tool was tested in Bangladesh and Kenya with the support of Zahurul Karim of CASEED, Dhaka, and Amos Waweru of Standards & Solutions Consulting Ltd, Nairobi. The authors are grateful to the implementers of various USAID projects in the two countries, and to USAID staff in Washington and in the country offices, without whose help the tool could not have been developed and tested.\n\nContacts\nGlobal Alliance for Improved Nutrition, Washington DC\nBonnie McClafferty (bmclafferty@gainhealth.org)\nwww.gainhealth.org\n\nInstitute of Development Studies\nJohn Humphrey (j.humphrey@ids.ac.uk)\nSpencer Henson (s.henson@ids.ac.uk)\nwww.ids.ac.uk",
@@ -47,7 +55,7 @@ Decide.STEP_DATA = [
     "type" : "part",
     "title":"About the tool",
     "next" :  "Introduction2",
-    "description" : " There is a strong demand for initiatives that link the food/agriculture and nutrition/health sectors effectively, so that better progress can be made addressing the challenges of undernutrition. At the same time, there is specific interest in the role of the private sector in improving the availability of nutrient-dense foods and delivering them to groups with nutritional deficiencies. Public sector and donor initiatives directed at agriculture and nutrition are thus increasingly partnering with the private sector.\n\nThis tool provides a practical way of focusing value chain-based agricultural initiatives to narrow the gap between the goal of raising the income and/or productivity of producers and/or the people they employ and the goal of improving nutrition. The starting point for the tool is specific interventions to strengthen agriculture-nutrition linkages or interventions that could be directed to this end. The tool has been developed to be applicable specifically to Feed the Future interventions, but is applicable more generally to agricultural interventions.\n\nThroughout, the term “intervention” is used to refer to projects, programs or policies directed at the agricultural sector.  Thus, the tool aims to be applicable to a wide range of actions that have enhancing the income and/or productivity of producers and/or the people they employ as a key objective.\n\nThe tool addresses the following priority issues:\n\n1. Improving nutritional status by linking agriculture and nutrition effectively: The tool provides a means of assessing the extent to which interventions aimed at agriculture improve dietary diversity of poor households in general, or specific target households or individuals.\n\n2. Mobilising private sector inputs for agriculture-nutrition linkages: The tool identifies opportunities and constraints for private sector involvement in making food value chains more “nutrition-friendly”.\n\nThe tool is designed to be applied to interventions that take agriculture as their starting point. Thus, it aims to steer the development and/or implementation of interventions that are primarily directed at enhancing agricultural incomes and/or productivity towards demonstrated and more appreciably nutritional improvements. In many cases, these interventions are focused on agricultural commodities that have been selected on the basis of criteria among which nutrition is not the foremost consideration.\n\nThe tool intentionally applies a flexible and broad perspective in considering the nutritional improvements in particular population groups that might be brought about by agricultural interventions. This reflects the fact that agricultural interventions may have given little consideration to these nutritional improvements, such that it is important to be pragmatic about what can be achieved and demonstrated in such contexts and outside of more comprehensive nutrition/health interventions. Thus, while there is frequent reference to “nutritional impacts”, this is taken to include both outcomes (for example increased dietary diversity, consumption of nutrient-dense foods and/or nutrient intake) and impacts (for example prevalence of nutritional deficiencies and/or health status). In selected places, the tool aims to capture information on the degree to which there is evidence of these various outcomes and impacts. "
+    "description" : " There is a strong demand for initiatives that link the food/agriculture and nutrition/health sectors effectively, so that better progress can be made addressing the challenges of undernutrition. At the same time, there is specific interest in the role of the private sector in improving the availability of nutrient-dense foods and delivering them to groups with nutritional deficiencies. Public sector and donor initiatives directed at agriculture and nutrition are thus increasingly partnering with the private sector.\n\nThis tool provides a practical way of focusing value chain-based agricultural initiatives to narrow the gap between the goal of raising the income and/or productivity of producers and/or the people they employ and the goal of improving nutrition. The starting point for the tool is specific interventions to strengthen agriculture-nutrition linkages or interventions that could be directed to this end. The tool has been developed to be applicable specifically to Feed the Future interventions, but is applicable more generally to agricultural interventions.\n\nThroughout, the term \"intervention\" is used to refer to projects, programs or policies directed at the agricultural sector.  Thus, the tool aims to be applicable to a wide range of actions that have enhancing the income and/or productivity of producers and/or the people they employ as a key objective.\n\nThe tool addresses the following priority issues:\n\n1. Improving nutritional status by linking agriculture and nutrition effectively: The tool provides a means of assessing the extent to which interventions aimed at agriculture improve dietary diversity of poor households in general, or specific target households or individuals.\n\n2. Mobilising private sector inputs for agriculture-nutrition linkages: The tool identifies opportunities and constraints for private sector involvement in making food value chains more \"nutrition-friendly\".\n\nThe tool is designed to be applied to interventions that take agriculture as their starting point. Thus, it aims to steer the development and/or implementation of interventions that are primarily directed at enhancing agricultural incomes and/or productivity towards demonstrated and more appreciably nutritional improvements. In many cases, these interventions are focused on agricultural commodities that have been selected on the basis of criteria among which nutrition is not the foremost consideration.\n\nThe tool intentionally applies a flexible and broad perspective in considering the nutritional improvements in particular population groups that might be brought about by agricultural interventions. This reflects the fact that agricultural interventions may have given little consideration to these nutritional improvements, such that it is important to be pragmatic about what can be achieved and demonstrated in such contexts and outside of more comprehensive nutrition/health interventions. Thus, while there is frequent reference to \"nutritional impacts\", this is taken to include both outcomes (for example increased dietary diversity, consumption of nutrient-dense foods and/or nutrient intake) and impacts (for example prevalence of nutritional deficiencies and/or health status). In selected places, the tool aims to capture information on the degree to which there is evidence of these various outcomes and impacts. "
   },
   {
     "id":"Introduction2",
@@ -70,7 +78,7 @@ Decide.STEP_DATA = [
     "title":"A part-by-part guide",
     "type" : "part",
     "next" :  "0",
-    "description" : "The Rapid Assessment Tool has seven parts.\n\nPart 1 identifies the activities, objectives and goals of the interventions, the foods they target and private sector involvement. The private sector is taken here to include not only large companies, but also small firms and informal sector businesses involved in the production, processing and marketing of the food. Part 1 also identifies the main activities and actors, and the improvements that the intervention is designed to achieve, through a process of value-chain mapping.\n\nPart 2 establishes whether the interventions aim to increase consumption of nutrient-dense food, either on-farm or off-farm. Interventions this goal go to Part 6. Part 3 examines how a project promotes on-farm consumption of food, including among paid labour. Part 4 focuses on off-farm consumption and the value chain linkages between production and consumption. The whole-chain approach focuses on four different stages of the value chain: production, transport storage and processing, distribution and consumption. At each, the analysis considers two objectives: 1) maintaining or enhancing the nutritional value of the food; and 2) developing and supporting business relationships that sustain the food-value chain. Part 4 is repeated in Part 5 if the intervention targets increases in consumption by more than one off-farm group.\n\nPart 6 examines the income-enhancement route to tackling undernutrition. Agricultural projects often start with the primary goal of increasing incomes from farming by improving productivity and links to markets. Predominantly, the focus is on farm households, but it is important not to forget potential impacts on the households of paid labour that works on these farms. In practice, however, the linkage between increased household incomes and reduced undernutrition in the same households is sometimes weak. Thus, Part 6 assesses whether and how the interventions focus on strengthening this linkage through promoting consumption of nutrient-dense food that is produced by farm households, acquired as part of the remuneration for paid labour on these farms and/or purchased, and also through the production of additional foods on-farm (for example, through kitchen gardens) that contribute to greater dietary diversity.\n\nPart 7 provides a summary of assessment results. Organised around a series of questions about how the interventions link agriculture to nutrition, this part of the tool identifies the interventions’ strengths and weaknesses and provides a basis for identifying where interventions might consider changes in design to strengthen the nutritional benefits.\n\nHere are some specific instructions on the completion of the tool:\n\n1. The various parts of the tool are moved through in sequence.  The tool automatically saves information entered as you as you go. A \"Save\" button is also provided at bottom left of the browser window. \n\n2. Users do not have to answer all of the questions presented by the tool. To move to the next question click the \"Next\" button.\n\n3. Some questions are answered by entering text in the box below the question. Other questions have set categories for answers which are presented in the drop down lists below the question.\n\n4. Note that Parts 7.1 to 7.6  of the tool are completed automatically. This Part provides a summary of the information entered and makes recommendations on actions that should be taken.\n\n5. The \"Notes\" button opens a window in which issues, ideas and questions that arise during completion of Parts 2 to 6 of the tool can be noted. Critically, the tool aims to generate thought processes among those engaged in the design and/or implementation of interventions as to how their nutritional impacts can be enhanced and/or better demonstrated. These issues, ideas and questions should be recorded in the \"Notes\" window as Parts 2 to 6 are completed.\n\n6. Once the user is satisfied they have completed the survey, they can output a simple print-ready HTML page that can be printed, saved, or copied and pasted into Microsoft Word, other word processors, or email programs. The content of the \"Notes\" window will be included in the outputted report as \"Part 7.7\"."
+    "description" : "The Rapid Assessment Tool has seven parts.\n\nPart 1 identifies the activities, objectives and goals of the interventions, the foods they target and private sector involvement. The private sector is taken here to include not only large companies, but also small firms and informal sector businesses involved in the production, processing and marketing of the food. Part 1 also identifies the main activities and actors, and the improvements that the intervention is designed to achieve, through a process of value-chain mapping.\n\nPart 2 establishes whether the interventions aim to increase consumption of nutrient-dense food, either on-farm or off-farm. Interventions this goal go to Part 6. Part 3 examines how a project promotes on-farm consumption of food, including among paid labour. Part 4 focuses on off-farm consumption and the value chain linkages between production and consumption. The whole-chain approach focuses on four different stages of the value chain: production, transport storage and processing, distribution and consumption. At each, the analysis considers two objectives: 1) maintaining or enhancing the nutritional value of the food; and 2) developing and supporting business relationships that sustain the food-value chain. Part 4 is repeated in Part 5 if the intervention targets increases in consumption by more than one off-farm group.\n\nPart 6 examines the income-enhancement route to tackling undernutrition. Agricultural projects often start with the primary goal of increasing incomes from farming by improving productivity and links to markets. Predominantly, the focus is on farm households, but it is important not to forget potential impacts on the households of paid labour that works on these farms. In practice, however, the linkage between increased household incomes and reduced undernutrition in the same households is sometimes weak. Thus, Part 6 assesses whether and how the interventions focus on strengthening this linkage through promoting consumption of nutrient-dense food that is produced by farm households, acquired as part of the remuneration for paid labour on these farms and/or purchased, and also through the production of additional foods on-farm (for example, through kitchen gardens) that contribute to greater dietary diversity.\n\nPart 7 provides a summary of assessment results. Organised around a series of questions about how the interventions link agriculture to nutrition, this part of the tool identifies the interventions' strengths and weaknesses and provides a basis for identifying where interventions might consider changes in design to strengthen the nutritional benefits.\n\nHere are some specific instructions on the completion of the tool:\n\n1. The various parts of the tool are moved through in sequence.  The tool automatically saves information entered as you as you go. A \"Save\" button is also provided at bottom left of the browser window. \n\n2. Users do not have to answer all of the questions presented by the tool. To move to the next question click the \"Next\" button.\n\n3. Some questions are answered by entering text in the box below the question. Other questions have set categories for answers which are presented in the drop down lists below the question.\n\n4. Note that Parts 7.1 to 7.6  of the tool are completed automatically. This Part provides a summary of the information entered and makes recommendations on actions that should be taken.\n\n5. The \"My Notes\" button opens a window in which issues, ideas and questions that arise during completion of Parts 2 to 6 of the tool can be noted. Critically, the tool aims to generate thought processes among those engaged in the design and/or implementation of interventions as to how their nutritional impacts can be enhanced and/or better demonstrated. These issues, ideas and questions should be recorded in the \"My Notes\" window as Parts 2 to 6 are completed.\n\n6. Once the user is satisfied they have completed the survey, they can output a simple print-ready HTML page that can be printed, saved, or copied and pasted into Microsoft Word, other word processors, or email programs. The content of the \"My Notes\" window will be included in the outputted report as \"Part 7.7\"."
   },
   {
     "id":"0", 
@@ -900,12 +908,12 @@ Decide.STEP_DATA = [
                 {
                   "id":"3.2.1.1.2",
                   "answer":"No",
-                  "next":"3.3.1"
+                  "next":"3.3"
                 },
                 {
                   "id":"3.2.1.1.3",
                   "answer":"Don't know",
-                  "next":"3.3.1"
+                  "next":"3.3"
                 }
               ]
              }
@@ -1093,7 +1101,7 @@ Decide.STEP_DATA = [
                 "id":"3.3.2.1",
                 "num":"3.3.2",
                 "label":"Have challenges in sourcing inputs and/or applying enhanced production techniques been identified?",
-                "type":"select",
+                "type":"radio",
                 "options": [
                 {
                   "id":"3.3.2.1.1",
@@ -1104,11 +1112,6 @@ Decide.STEP_DATA = [
                   "id":"3.3.2.1.2",
                   "answer":"No",
                   "next":"3.3.3"
-                },
-                {
-                  "id":"3.2.3.1.3",
-                  "answer":"Don't know",
-                  "next":"3.2.4"
                 }
               ]
              }
@@ -1386,7 +1389,7 @@ Decide.STEP_DATA = [
                   "next":"3.4"
                 },
                 {
-                  "id":"3.3.14.1.2",
+                  "id":"3.3.15.1.2",
                   "answer":"No",
                   "next":"3.3.16"
                 }
@@ -1585,7 +1588,7 @@ Decide.STEP_DATA = [
                 {
                   "id":"3.4.4.1.2",
                   "answer":"No",
-                  "next":"4.1a"
+                  "next":"4"
                 }
               ]
              }
@@ -1686,8 +1689,8 @@ Decide.STEP_DATA = [
         "num" : "4.1 (Pt. 2)",
         "parent" : "4",
         "type" : "section",
-        "title" : function (step, responses, any, all) {
-          return "Assessment of the nutritional impact on " + responses['4.1.2'].answer[0].value;
+        "title" : function (step, getResponse, any, all) {
+          return "Assessment of the nutritional impact on " + getResponse('4.1.2', 0);
         },
         "steps": [
           {
@@ -2255,8 +2258,8 @@ Decide.STEP_DATA = [
         "num" : "4.2",
         "parent" : "4",
         "type" : "section",
-        "title" : function (step, responses, any, all) {
-          return "Are there challenges with distributing the food to " + responses['4.1.2'].answer[0].value;
+        "title" : function (step, getResponse, any, all) {
+          return "Are there challenges with distributing the food to " + getResponse('4.1.2', 0);
         },
         "steps": [
           {
@@ -2791,8 +2794,8 @@ Decide.STEP_DATA = [
         "num" : "4.3",
         "parent" : "4",
         "type" : "section",
-        "title" : function (step, responses, any, all) {
-          return "Are there challenges with storage, transport and processing in value chains to " + responses['4.1.2'].answer[0].value;
+        "title" : function (step, getResponse, any, all) {
+          return "Are there challenges with storage, transport and processing in value chains to " + getResponse('4.1.2' , 0);
         },
         "steps": [
           {
@@ -3302,8 +3305,8 @@ Decide.STEP_DATA = [
         "num" : "4.4",
         "parent" : "4",
         "type" : "section",
-        "title" : function (step, responses, any, all) {
-          return "How will the nutritional impact of the intervention be monitored and assessed in the case of " + responses['4.1.2'].answer[0].value;
+        "title" : function (step, getResponse, any, all) {
+          return "How will the nutritional impact of the intervention be monitored and assessed in the case of " + getResponse('4.1.2', 0)
         },
         "steps": [
           {
@@ -3381,7 +3384,7 @@ Decide.STEP_DATA = [
               {
                 "id":"4.4.3.1",
                 "num":"4.4.3",
-                "title":"Would it be possible to include such indicators in the  monitoring and evaluation plan?",
+                "label":"Would it be possible to include such indicators in the monitoring and evaluation plan?",
                 "type":"radio",
                 "options": [
                   {
@@ -3402,20 +3405,25 @@ Decide.STEP_DATA = [
             "type":"question",
             "items" : [
               {
-                "id":"4.4.3.1",
-                "num":"4.4.3",
+                "id":"4.4.4.1",
+                "num":"4.4.4",
                 "label":"Has a baseline nutritional assessment been undertaken?",
                 "type":"radio",
                 "options": [
                   {
-                    "id":"4.4.3.1.1",
+                    "id":"4.4.4.1.1",
                     "answer":"Yes",
                     "next":"4.4.5"
                   },
                   {
-                    "id":"4.4.3.1.2",
+                    "id":"4.4.4.1.2",
                     "answer":"No",
-                    "next":"5"
+                    "next": function (step, getResponse) {
+                      if (!getResponse('4.1.2', 1)) {
+                        return '6';
+                      }
+                      return '5';
+                    }
                   }
                 ]
               }
@@ -3425,7 +3433,12 @@ Decide.STEP_DATA = [
             "id":"4.4.5",
             "parent":"4.4",
             "type":"question",
-            "next":"5",
+            "next": function (step, getResponse) {
+              if (!getResponse('4.1.2', 1)) {
+                return '6';
+              }
+              return '5';
+            },
             "items": [
               {
               "id":"4.4.5.1",
@@ -3444,15 +3457,15 @@ Decide.STEP_DATA = [
     "id" : "5",
     "num" : "Part 5",
     "type" : "part",
-    "title" : "Impact of the intervention on nutrition of individuals not directly assisted by the intervention – second target group",
+    "title" : "Impact of the intervention on nutrition of individuals not directly assisted by the intervention - second target group",
     "steps" : [
       {
         "id" : "5.1",
         "num" : "5.1",
         "parent" : "5",
         "type" : "section",
-        "title" : function (step, responses, any, all) {
-          return "Assessment of the nutritional impact on " + responses['4.1.2'].answer[1].value;
+        "title" : function (step, getResponse, any, all) {
+          return "Assessment of the nutritional impact on " + getResponse('4.1.2', 1);
         },
         "steps": [
           {
@@ -4026,8 +4039,8 @@ Decide.STEP_DATA = [
         "num" : "5.2",
         "parent" : "5",
         "type" : "section",
-        "title" : function (step, responses) {
-          return "Are there challenges with distributing the food to " + responses['4.1.2'].answer[1].value;
+        "title" : function (step, getResponse) {
+          return "Are there challenges with distributing the food to " + getResponse('4.1.2', 1);
         },
         "steps": [
           {
@@ -4556,8 +4569,8 @@ Decide.STEP_DATA = [
         "num" : "5.3",
         "parent" : "5",
         "type" : "section",
-        "title" : function (step, responses) {
-          return "Are there challenges with storage, transport and processing in value chains to " + responses['4.1.2'].answer[1].value;
+        "title" : function (step, getResponse) {
+          return "Are there challenges with storage, transport and processing in value chains to " + getResponse('4.1.2', 1);
         },
         "steps": [
           {
@@ -5062,8 +5075,8 @@ Decide.STEP_DATA = [
         "num" : "5.4",
         "parent" : "5",
         "type" : "section",
-        "title" : function (step, responses) {
-          return "How will the nutritional impact of the intervention be monitored and assessed in the case of" + responses['4.1.2'].answer[1].value;
+        "title" : function (step, getResponse) {
+          return "How will the nutritional impact of the intervention be monitored and assessed in the case of" + getResponse('4.1.2', 1);
         },
         "steps": [
           {
@@ -5304,7 +5317,19 @@ Decide.STEP_DATA = [
             "id":"6.5.1",
             "num":"6.5",
             "label":"Do you know whether individuals within target producer households will consume more nutrient-dense foods if their income and/or productivity is enhanced?",
-            "type":"textarea"
+            "type": "radio",
+            "options": [
+              {
+                "id":"6.5.1.1",
+                "answer":"Yes",
+                "next":"6.6"
+              },
+              {
+                "id":"6.5.1.2",
+                "answer":"No",
+                "next":"6.6"
+              }
+            ]
           }
         ]
       },
@@ -5318,7 +5343,19 @@ Decide.STEP_DATA = [
             "id":"6.6.1",
             "num":"6.6",
             "label":"Would it be possible for you to find out whether individuals within target producer households will consume more nutrient-dense foods if their income and/or productivity is enhanced?",
-            "type":"textarea"
+            "type": "radio",
+            "options": [
+              {
+                "id":"6.6.1.1",
+                "answer":"Yes",
+                "next":"6.7"
+              },
+              {
+                "id":"6.6.1.2",
+                "answer":"No",
+                "next":"6.7"
+              }
+            ]
           }
         ]
       },
@@ -5383,6 +5420,7 @@ Decide.STEP_DATA = [
         "id" : "6.10",
         "parent" : "6",
         "type" : "question",
+        "num": "6.10",
         "title":"In which of the following individuals in target producer households is consumption of nutrient-dense foods likely to increase?",
         "next":"6.11",
         "items" : [
@@ -5428,6 +5466,7 @@ Decide.STEP_DATA = [
         "id" : "6.11",
         "parent" : "6",
         "type" : "question",
+        "num":"6.11",
         "title":"What are the main routes through which increased consumption of nutrient-dense foods is likely to take place?",
         "next":"6.12",
         "items" : [
@@ -6110,9 +6149,9 @@ Decide.STEP_DATA = [
   {
     "id":"7", 
     "type" : "part",
-    "num" : "Summary",
+    "num" : "Part 7",
     "title":"Summary of key findings and action points",  
-    "description" : "You have now reached the end of the questions.\n\nPart 7 of the tool provides an overview of the intervention. It does not try to rate interventions per se or to say whether or not they are well or badly designed. Rather, Part 7 indicates how changes in an existing intervention or in the design of future interventions might create more effective linkages between agriculture and nutrition.\n\nThe overview focuses on Sections 2 to 6. The tables below identify specific questions from the assessment, summarise the answers and then identify action points.  It does not summarise the findings of the more qualitative elements of the tool.\n\nImportantly, Section 7 does not provide a comprehensive summary of the information entered into the tool and so should be read alongside Sections 2 to 6.  Furthermore, issues might have come to mind while completing Sections 2 to 6. A key aim of the tool is to stimulate ideas and questions in the minds of those designing and/or implementing interventions.  The \"Notes\" button at the bottom left provides some space for these to be recorded. These will be included in the outputted report as \"Part 7.7\".",
+    "description" : "You have now reached the end of the questions.\n\nPart 7 of the tool provides an overview of the intervention. It does not try to rate interventions per se or to say whether or not they are well or badly designed. Rather, Part 7 indicates how changes in an existing intervention or in the design of future interventions might create more effective linkages between agriculture and nutrition.\n\nThe overview focuses on Sections 2 to 6. The tables below identify specific questions from the assessment, summarise the answers and then identify action points.  It does not summarise the findings of the more qualitative elements of the tool.\n\nImportantly, Section 7 does not provide a comprehensive summary of the information entered into the tool and so should be read alongside Sections 2 to 6.  Furthermore, issues might have come to mind while completing Sections 2 to 6. A key aim of the tool is to stimulate ideas and questions in the minds of those designing and/or implementing interventions.  The \"My Notes\" button at the bottom left provides some space for these to be recorded. These will be included in the outputted report as \"Part 7.7\".",
     "steps" : [
       {
         "id" : "7.1",
@@ -6130,32 +6169,32 @@ Decide.STEP_DATA = [
                 "id":"7.1.1.1",
                 "label":"Name of intervention",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-                  return responses['0.1.1'].answer[1] || '-';
+                "value" : function (step, getResponse, any, all) {
+                  return getResponse('0.1.1', 1);
                 }
               },
               {
                 "id":"7.1.1.2",
                 "label":"Food to which assessment applied",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-                  return responses['1.1.3'].answer[0] || '-';
+                "value" : function (step, getResponse, any, all) {
+                  return getResponse('1.1.3', 0);
                 }
               },
               {
                 "id":"7.1.1.3",
                 "label":"Organization designing or managing the intervention",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-                  return responses['0.1.1'].answer[2] || '-';
+                "value" : function (step, getResponse, any, all) {
+                  return getResponse('0.1.1', 2);
                 }
               },
               {
                 "id":"7.1.1.4",
                 "label":"Date of assessment",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-                  return responses['0.1.1'].answer[4] || '';
+                "value" : function (step, getResponse, any, all) {
+                  return getResponse('0.1.1', 4);
                 }
               }
             ]
@@ -6179,10 +6218,10 @@ Decide.STEP_DATA = [
                 "id":"7.2.1.1",
                 "label":"Does the intervention aim to increase the availability of a nutrient-dense food?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-                  if (responses['2.1.1'].answer[0] === '2.1.1.1') {
+                "value" : function (step, getResponse, any, all) {
+                  if (getResponse('2.1', 0) === '2.1.1.1') {
                     return 'Yes';
-                  } else if (responses['2.1.1'].answer[0] === '2.1.1.2') {
+                  } else if (getResponse('2.1', 0) === '2.1.1.2') {
                     return 'No';
                   }
                 }
@@ -6191,16 +6230,17 @@ Decide.STEP_DATA = [
                 "id":"7.2.1.2",
                 "label":"Does the intervention aim to increase the nutritional value of a food that is currently not nutrient dense?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+
                   var expSet = [
-                    responses['2.1.1'].answer[0] === '2.1.1.2',
-                    responses['2.2.1'].answer[0] === '2.2.1.2'
+                    getResponse('2.1', 0) === '2.1.1.2',
+                    getResponse('2.2', 0) === '2.2.1.2'
                   ], expSet2 = [
-                    responses['2.1.1'].answer[0] === '2.1.1.2',
-                    responses['2.2.1'].answer[0] === '2.2.1.1'
+                    getResponse('2.1', 0) === '2.1.1.2',
+                    getResponse('2.2', 0) === '2.2.1.1'
                   ];
 
-                  if (responses['2.1.1'].answer[0] === '2.1.1.1') {
+                  if (getResponse('2.1', 0) === '2.1.1.1') {
                     return 'Not applicable';
                   } else if (all(expSet)) {
                     return 'No';
@@ -6213,21 +6253,21 @@ Decide.STEP_DATA = [
                 "id":"7.2.1.3",
                 "label":"Has consideration been given to the potential for increasing the nutritional value of the food?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
                   var expSet = [
-                    responses['2.2.1'].answer[0] === '2.2.1.2',
-                    responses['2.3.1'].answer[0] === '2.3.1.1'
+                    getResponse('2.2', 0) === '2.2.1.2',
+                    getResponse('2.3', 0) === '2.3.1.1'
                   ], expSet2 = [
-                    responses['2.2.1'].answer[0] === '2.2.1.2',
-                    responses['2.3.1'].answer[0] === '2.3.1.2'
+                    getResponse('2.2', 0) === '2.2.1.2',
+                    getResponse('2.3', 0) === '2.3.1.2'
                   ], expSet3 = [
-                    responses['2.2.1'].answer[0] === '2.2.1.2',
-                    responses['2.3.1'].answer[0] === '2.3.1.3'
+                    getResponse('2.2', 0) === '2.2.1.2',
+                    getResponse('2.3', 0) === '2.3.1.3'
                   ];
 
-                  if (responses['2.1.1'].answer[0] === '2.1.1.1') {
+                  if (getResponse('2.1', 0) === '2.1.1.1') {
                     return 'Not applicable';
-                  } else if (responses['2.2.1'].answer[0] === '2.2.1.1') {
+                  } else if (getResponse('2.2', 0) === '2.2.1.1') {
                     return 'Not applicable';
                   } else if (all(expSet)) {
                     return "Considered and identified opportunities which have not been taken up";
@@ -6242,28 +6282,21 @@ Decide.STEP_DATA = [
                 "id":"7.2.1.4",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-                  var expSet = [
-                    responses['2.2.1'].answer[0] === '2.2.1.2',
-                    responses['2.3.1'].answer[0] === '2.3.1.1'
-                  ], expSet2 = [
-                    responses['2.2.1'].answer[0] === '2.2.1.2',
-                    responses['2.3.1'].answer[0] === '2.3.1.2'
-                  ], expSet3 = [
-                    responses['2.2.1'].answer[0] === '2.2.1.2',
-                    responses['2.3.1'].answer[0] === '2.3.1.3'
-                  ];
+                "value" : function (step, getResponse, any, all, pastValues) {
+                  if (pastValues['7.2.1.1'] === 'Yes' || pastValues['7.2.1.2'] === 'Yes') {
+                    return 'No action needed';
+                  }
 
-                  if (responses['2.1.1'].answer[0] === '2.1.1.1') {
-                    return '-';
-                  } else if (responses['2.2.1'].answer[0] === '2.2.1.1') {
-                    return '-';
-                  } else if (all(expSet)) {
-                    return "Consider a project redesign that addresses the identified opportunities to increase the nutritional value of the target food";
-                  } else if (all(expSet2)) {
-                    return "Revisit the process of identifying opportunities to increase the nutritional value of the target food";
-                  } else if (all(expSet3)) {
-                    return "Undertake an assessment of the opportunities for increasing the nutritional value of the target food";
+                  if (pastValues['7.2.1.3'] === 'Considered and identified opportunities which have not been taken up') {
+                    return 'Consider a project redesign that addresses the identified opportunities to increase the nutritional value of the target food';
+                  }
+
+                  if (pastValues['7.2.1.3'] === 'Considered but no opportunities identified') {
+                    return '\n Revisit the process of identifying opportunities to increase the nutritional value of the target food';
+                  }
+
+                  if (pastValues['7.2.1.3'] === 'Not considered') {
+                    return '\n Undertake an assessment of the opportunities for increasing the nutritional value of the target food';
                   }
                 }
               }
@@ -6280,10 +6313,10 @@ Decide.STEP_DATA = [
                 "id":"7.2.2.1",
                 "label":"Does the intervention plan to maintain/increase consumption of the target food on farms that produce it and/or within the households of labour that works on these farms?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-                  if (responses['2.4'].answer[0] === '2.4.1.1') {
+                "value" : function (step, getResponse, any, all) {
+                  if (getResponse('2.4', 0) === '2.4.1.1') {
                     return 'Yes';
-                  } else if (responses['2.4'].answer[0] === '2.4.1.2') {
+                  } else if (getResponse('2.4', 0) === '2.4.1.2') {
                     return 'No';
                   }
                 }
@@ -6292,8 +6325,8 @@ Decide.STEP_DATA = [
                 "id":"7.2.2.2",
                 "label":"Does the intervention specifically aim to increase consumption of the target food by individuals outside of producer households directly assisted by the intervention?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-                  if (responses['4.1.1'].answer[0] === '4.1.1.1.1') {
+                "value" : function (step, getResponse, any, all) {
+                  if (getResponse('4.1.1', 0) === '4.1.1.1.1') {
                     return 'Yes';
                   } else {
                     return 'No';
@@ -6304,11 +6337,14 @@ Decide.STEP_DATA = [
                 "id":"7.2.2.3",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-                  if (responses['2.4'].answer[0] === '2.4.1.1') {
-                    return '-';
-                  } else if (responses['2.4'].answer[0] === '2.4.1.2') {
-                    return "Consider the scope to promote increased consumption of the target food by producer households, including the households of employed labour";
+                "value" : function (step, getResponse, any, all, pastValues) {
+                  debugger;
+                  if (pastValues['7.2.2.1'] === 'No') {
+                    return 'Consider the scope to promote increased consumption of the target food by producer households, including the households of employed labour';
+                  }
+
+                  if (pastValues['7.2.2.2'] === 'No') {
+                    return '\n Consider the scope for promoting increased consumption of the target food by households beyond those that are directly assisted by the intervention';
                   }
                 }
               }
@@ -6335,16 +6371,16 @@ Decide.STEP_DATA = [
                 "id":"7.3.1.1",
                 "label":"Do you know that some or all of these individuals lack the nutrients supplied by the food?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
                   var expSet = [
-                    responses['3.1.2'].answer[0] === '3.1.2.1.2',
-                    responses['3.1.3'].answer[0] === '3.1.3.1.1'
+                    getResponse('3.1.2', 0) === '3.1.2.1.2',
+                    getResponse('3.1.3', 0) === '3.1.3.1.1'
                   ], expSet2 = [
-                    responses['3.1.2'].answer[0] === '3.1.2.1.2',
-                    responses['3.1.3'].answer[0] === '3.1.3.1.2'
+                    getResponse('3.1.2', 0) === '3.1.2.1.2',
+                    getResponse('3.1.3', 0) === '3.1.3.1.2'
                   ];
 
-                  if (responses['3.1.2'].answer[0] === '3.1.2.1.1') {
+                  if (getResponse('3.1.2', 0) === '3.1.2.1.1') {
                     return 'Yes';
                   } else if (all(expSet)) {
                     return 'No but could find out';
@@ -6357,21 +6393,21 @@ Decide.STEP_DATA = [
                 "id":"7.3.1.2",
                 "label":"Do you know that some or all individuals in the target producer households would consume (more of) this food if it was made available to them?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
                   var expSet = [
-                    responses['3.1.8'].answer[0]  === '3.1.8.1.2',
-                    responses['3.1.10'].answer[0] === '3.1.10.1'
+                    getResponse('3.1.8', 0)  === '3.1.8.1.2',
+                    getResponse('3.1.10', 0) === '3.1.10.1'
                   ], expSet2 = [
-                    responses['3.1.8'].answer[0]  === '3.1.8.1.2',
-                    responses['3.1.10'].answer[0] === '3.1.10.2'
+                    getResponse('3.1.8', 0)  === '3.1.8.1.2',
+                    getResponse('3.1.10', 0) === '3.1.10.2'
                   ];
 
-                  if (responses['3.1.8'].answer[0] === '3.1.8.1.1') {
+                  if (getResponse('3.1.8', 0) === '3.1.8.1.1') {
                     return 'Yes';
                   } else if (all(expSet)) {
                     return 'No but could find out';
                   } else if (all(expSet2)) {
-                    return 'No and could no find out';
+                    return 'No and could not find out';
                   }
                 }
               },
@@ -6379,47 +6415,24 @@ Decide.STEP_DATA = [
                 "id":"7.3.1.3",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-                  /* =if(or(M6="no and no scope to gather",M7="no and no scope to gather"),"Reconsider ability to make claims about nutritional impact of the intervention through increased consumption of the target food on target individuals","")
-                  */
-                  var outcome1,
-                      outcome2,
-                      expSet = [
-                        responses['3.1.2'].answer[0] === '3.1.2.1.2',
-                        responses['3.1.3'].answer[0] === '3.1.3.1.1'
-                      ], expSet2 = [
-                        responses['3.1.2'].answer[0] === '3.1.2.1.2',
-                        responses['3.1.3'].answer[0] === '3.1.3.1.2'
-                      ];
-
-                  if (responses['3.1.2'].answer[0] === '3.1.2.1.1') {
-                    outcome = 'Yes';
-                  } else if (all(expSet)) {
-                    outcome = 'No but could find out';
-                  } else if (all(expSet2)) {
-                    outcome = 'No and could not find out';
-                  }
-
-                  expSet = [
-                    responses['3.1.8'].answer[0]  === '3.1.8.1.2',
-                    responses['3.1.10'].answer[0] === '3.1.10.1'
-                  ], expSet2 = [
-                    responses['3.1.8'].answer[0]  === '3.1.8.1.2',
-                    responses['3.1.10'].answer[0] === '3.1.10.2'
+                "value" : function (step, getResponse, any, all, pastValues) {
+                  var expSet = [
+                    pastValues['7.3.1.1'] === 'No but could find out',
+                    pastValues['7.3.1.2'] === 'No but could find out'
+                  ], expSet = [
+                    pastValues['7.3.1.1'] === 'No and could not find out',
+                    pastValues['7.3.1.2'] === 'No and could not find out'
                   ];
 
-                  if (responses['3.1.8'].answer[0] === '3.1.8.1.1') {
-                    outcome2 = 'Yes';
-                  } else if (all(expSet)) {
-                    outcome2 = 'No but could find out';
-                  } else if (all(expSet2)) {
-                    outcome2 = 'No and could no find out';
+                  if (pastValues['7.3.1.1'] === 'Yes' && pastValues['7.3.1.2'] === 'Yes') {
+                    return 'No action needed';
                   }
-
-                  if (any(outcome1, outcome2)) {
-                    return "Reconsider ability to make claims about nutritional impact of the intervention through increased consumption of the target food on target individuals";
+                  if (any(expSet)) {
+                    return 'Explore ways in which this evidence can be gathered';
                   }
-
+                  if (any(expSet2)) {
+                    return 'Reconsider ability to make claims about nutritional impact of the intervention through increased consumption of the target food on target individuals';
+                  }
                 }
               }
             ]
@@ -6436,14 +6449,16 @@ Decide.STEP_DATA = [
                 "id":"7.3.2.1",
                 "label":"Is there any risk that the efforts taken to increase farm income and/or productivity could lead to a decline in consumption of the target food in target producer households?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-                  if (responses['3.2.1'].answer[0].value === '3.2.1.1.1') {
+                "value" : function (step, getResponse, any, all) {
+                  debugger;
+
+                  if (getResponse('3.2.1', 0) === '3.2.1.1.1') {
                     return 'Yes';
                   }
-                  if (responses['3.2.1'].answer[0].value === '3.2.1.1.2') {
+                  if (getResponse('3.2.1', 0) === '3.2.1.1.2') {
                     return 'No';
                   }
-                  if (responses['3.2.1'].answer[0].value === '3.2.1.1.3') {
+                  if (getResponse('3.2.1', 0) === '3.2.1.1.3') {
                     return 'Don\'t know';
                   }
                 }
@@ -6452,14 +6467,14 @@ Decide.STEP_DATA = [
                 "id":"7.3.2.2",
                 "label":"Is this likely to lead to an overall decline in the nutritional quality of the diet of any individuals within target producer households?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-                  if (responses['3.2.3'].answer[0].value === '3.2.3.1.1') {
+                "value" : function (step, getResponse, any, all) {
+                  if (getResponse('3.2.3', 0) === '3.2.3.1.1') {
                     return 'Yes';
                   }
-                  if (responses['3.2.3'].answer[0].value === '3.2.3.1.2') {
+                  if (getResponse('3.2.3', 0) === '3.2.3.1.2') {
                     return 'No';
                   }
-                  if (responses['3.2.3'].answer[0].value === '3.2.3.1.3') {
+                  if (getResponse('3.2.3', 0) === '3.2.3.1.3') {
                     return 'Dont\' know';
                   }
                 }
@@ -6468,11 +6483,11 @@ Decide.STEP_DATA = [
                 "id":"7.3.2.3",
                 "label":"Does the intervention include any specific efforts to prevent this decline?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-                  if (responses['3.2.4'].answer[0].value === '3.2.4.1.1') {
+                "value" : function (step, getResponse, any, all) {
+                  if (getResponse('3.2.4', 0) === '3.2.4.1.1') {
                     return 'Yes';
                   }
-                  if (responses['3.2.4'].answer[0].value === '3.2.4.1.2') {
+                  if (getResponse('3.2.4', 0) === '3.2.4.1.2') {
                     return 'No';
                   }
                 }
@@ -6481,14 +6496,26 @@ Decide.STEP_DATA = [
                 "id":"7.3.2.4",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all, pastValues) {
                   var expSet = [
-                    responses['3.2.1'].answer[0].value === '3.2.1.1.3',
-                    responses['3.2.3'].answer[0].value === '3.2.3.1.3'
+                    pastValues['7.3.2.1'] === 'No',
+                    pastValues['7.3.2.2'] === 'No',
+                    pastValues['7.3.2.3'] === 'Yes'
+                  ], expSet2 = [
+                    pastValues['7.3.2.1'] === 'Dont\' know',
+                    pastValues['7.3.2.2'] === 'Dont\' know'
                   ];
 
                   if (any(expSet)) {
-                    return "Assess the risk that consumption of the target food may decline and/or that this will lead to a decline in the nutritional quality of the diet of individuals in target producer households"
+                    return 'No action needed';
+                  }
+
+                  if (pastValues['7.3.2.1'] !== 'No' && any(expSet2)) {
+                    return 'Assess the risk that consumption of the target food may decline and/or that this will lead to a decline in the nutritional quality of the diet of individuals in target producer households';
+                  }
+
+                  if (pastValues['7.3.2.1'] !== 'No' && pastValues['7.3.2.3'] === 'No') {
+                    return 'Explore ways in which the intervention might prevent this decline in consumption of the target food';
                   }
                 }
               }
@@ -6506,16 +6533,16 @@ Decide.STEP_DATA = [
                 "id":"7.3.3.1",
                 "label":"Have challenges with acceptability of the food amongst households' members been identified?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
                   var expSet = [
-                    responses['3.1.11'].answer[0].value === '3.1.11.1.2',
-                    responses['3.1.12'].answer[0].value === '3.1.12.1.1'
+                    getResponse('3.1.11', 0) === '3.1.11.1.2',
+                    getResponse('3.1.12', 0) === '3.1.12.1.1'
                   ], expSet2 = [
-                    responses['3.1.11'].answer[0].value === '3.1.11.1.2',
-                    responses['3.1.12'].answer[0].value === '3.1.12.1.2'
+                    getResponse('3.1.11', 0) === '3.1.11.1.2',
+                    getResponse('3.1.12', 0) === '3.1.12.1.2'
                   ];
 
-                  if (responses['3.1.11'].answer[0].value === '3.1.11.1.1') {
+                  if (getResponse('3.1.11', 0) === '3.1.11.1.1') {
                     return 'Yes';
                   } else if (all(expSet)) {
                     return 'No but could do so';
@@ -6528,21 +6555,21 @@ Decide.STEP_DATA = [
                 "id":"7.3.3.2",
                 "label":"Have challenges associated with sourcing inputs and/or applying enhanced production techniques been identified?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
                   var expSet = [
-                    responses['3.3.2'].answer[0].value === '3.3.2.1.2',
-                    responses['3.3.3'].answer[0].value === '3.3.3.1.1'
+                    getResponse('3.3.2', 0) === '3.3.2.1.2',
+                    getResponse('3.3.3', 0) === '3.3.3.1.1'
                   ], expSet2 = [
-                    responses['3.3.2'].answer[0].value === '3.3.2.1.2',
-                    responses['3.3.3'].answer[0].value === '3.3.3.1.2'
+                    getResponse('3.3.2', 0) === '3.3.2.1.2',
+                    getResponse('3.3.3', 0) === '3.3.3.1.2'
                   ];
 
-                  if (responses['3.3.2'].answer[0].value === '3.3.2.1.1') {
+                  if (getResponse('3.3.2', 0) === '3.3.2.1.1') {
                     return 'Yes';
                   } else if (expSet)  {
                     return 'No but could do so';
                   } else if (expSet2) {
-                    return 'No but could not do so';
+                    return 'No and could not do so';
                   }
                 }
               },
@@ -6550,14 +6577,23 @@ Decide.STEP_DATA = [
                 "id":"7.3.3.3",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all, pastValues) {
                   var expSet = [
-                    responses['3.3.2'].answer[0].value === '3.3.2.1.1',
-                    responses['3.3.3'].answer[0].value === '3.3.3.1.1',
+                    pastValues['7.3.3.1'] === 'No but could do so',
+                    pastValues['7.3.3.2'] === 'No but could do so'
+                  ], expSet2 = [
+                    pastValues['7.3.3.1'] === 'No and could not do so',
+                    pastValues['7.3.3.2'] === 'No and could not do so'
                   ];
 
-                  if (all(expSet)) {
+                  if (pastValues['7.3.3.1'] === 'Yes' && pastValues['7.3.3.2'] === 'Yes') {
                     return 'No action needed';
+                  }
+                  if (any(expSet)) {
+                    return 'Undertake assessment of challenges in areas where this has not been concluded';
+                  }
+                  if (any(expSet2)) {
+                    return 'Reconsider abiltiy to make claims about nutritional impact of the intervention through increased consumption of the target food by target producer households';
                   }
                 }
               }
@@ -6575,33 +6611,24 @@ Decide.STEP_DATA = [
                 "id":"7.3.4.1",
                 "label":"Have all substantive challenges with acceptability of the food among households' members been addressed?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-                  /* =if(or
-                         ('Part 3.1'!P35="unresolved but scope to do so",
-                          'Part 3.1'!P35="substantively unresolved",
-                          'Part 3.1'!P36="unresolved but scope to do so",
-                          'Part 3.1'!P36="substantively unresolved",
-                          'Part 3.1'!P37="unresolved but scope to do so",
-                          'Part 3.1'!P37="substantively unresolved",
-                          'Part 3.1'!P38="unresolved but scope to do so",
-                          'Part 3.1'!P38="substantively unresolved",
-                          'Part 3.1'!P39="unresolved but scope to do so",
-                          'Part 3.1'!P39="substantively unresolved"),
-                            "No but scope to do so",
-                            if(or(
-                               'Part 3.1'!P35="no scope to resolve",
-                               'Part 3.1'!P36="no scope to resolve",
-                               'Part 3.1'!P37="no scope to resolve",
-                               'Part 3.1'!P38="no scope to resolve",
-                               'Part 3.1'!P39="no scope to resolve"),
-                              "No and no scope to resolve","Yes"))*/
-
-                  // Look at the ids for custom html
-
+                "value" : function (step, getResponse, any, all, pastValues) {
                   var expSet = [
-
+                    getResponse('3.1.15', 2)  === '3.1.15.1.1.3.4',
+                    getResponse('3.1.15', 2)  === '3.1.15.1.1.3.3',
+                    getResponse('3.1.15', 5)  === '3.1.15.1.2.3.4',
+                    getResponse('3.1.15', 5)  === '3.1.15.1.2.3.3',
+                    getResponse('3.1.15', 8)  === '3.1.15.1.3.3.4',
+                    getResponse('3.1.15', 8)  === '3.1.15.1.3.3.3',
+                    getResponse('3.1.15', 11) === '3.1.15.1.4.3.4',
+                    getResponse('3.1.15', 11) === '3.1.15.1.4.3.3',
+                    getResponse('3.1.15', 14) === '3.1.15.1.5.3.4',
+                    getResponse('3.1.15', 14) === '3.1.15.1.5.3.3'
                   ], expSet2 = [
-
+                    getResponse('3.1.15', 2)  === '3.1.15.1.1.3.5',
+                    getResponse('3.1.15', 5)  === '3.1.15.1.2.3.5',
+                    getResponse('3.1.15', 8)  === '3.1.15.1.3.3.5',
+                    getResponse('3.1.15', 11) === '3.1.15.1.4.3.5',
+                    getResponse('3.1.15', 14) === '3.1.15.1.5.3.5'
                   ];
 
                   if (any[expSet]) {
@@ -6617,16 +6644,58 @@ Decide.STEP_DATA = [
                 "id":"7.3.4.2",
                 "label":"Have all substantive challenges associated with sourcing inputs and/or applying enhanced production techniques been addressed?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('3.3.6', 2)  === '3.3.6.1.1.3.4',
+                    getResponse('3.3.6', 2)  === '3.3.6.1.1.3.3',
+                    getResponse('3.3.6', 5)  === '3.3.6.1.2.3.4',
+                    getResponse('3.3.6', 5)  === '3.3.6.1.2.3.3',
+                    getResponse('3.3.6', 8)  === '3.3.6.1.3.3.4',
+                    getResponse('3.3.6', 8)  === '3.3.6.1.3.3.3',
+                    getResponse('3.3.6', 11) === '3.3.6.1.4.3.4',
+                    getResponse('3.3.6', 11) === '3.3.6.1.4.3.3',
+                    getResponse('3.3.6', 14) === '3.3.6.1.5.3.4',
+                    getResponse('3.3.6', 14) === '3.3.6.1.5.3.3'
+                  ], expSet2 = [
+                    getResponse('3.3.6', 2)  === '3.3.6.1.1.3.5',
+                    getResponse('3.3.6', 5)  === '3.3.6.1.2.3.5',
+                    getResponse('3.3.6', 8)  === '3.3.6.1.3.3.5',
+                    getResponse('3.3.6', 11) === '3.3.6.1.4.3.5',
+                    getResponse('3.3.6', 14) === '3.3.6.1.5.3.5'
+                  ];
 
+                  if (any[expSet]) {
+                    return "No but scope to do so";
+                  } else if (any[expSet2]) {
+                    return "No and no scope to resolve";
+                  } else {
+                    return "Yes";
+                  }
                 }
               },
               {
                 "id":"7.3.4.3",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all, pastValues) {
+                  var expSet = [
+                    pastValues['7.3.4.1'] === 'Yes',
+                    pastValues['7.3.4.2'] === 'Yes'
+                  ], expSet2 = [
+                    pastValues['7.3.4.1'] === 'No but scope to do so',
+                    pastValues['7.3.4.2'] === 'No but scope to do so'
+                  ], expSet3 = [
+                    pastValues['7.3.4.1'] === 'No and no scope to resolve',
+                    pastValues['7.3.4.2'] === 'No and no scope to resolve'
+                  ];
 
+                  if (any(expSet)) {
+                    return 'No action needed';
+                  } else if (any(expSet2)) {
+                    return 'Explore options for resolving the remaining substantive challenges';
+                  } else if (any(expSet3)) {
+                    return 'Reconsider ability to make claims about nutritional impact of the intervention through increased consumption of the target food by target producer households';
+                  }
                 }
               }
             ]
@@ -6643,24 +6712,21 @@ Decide.STEP_DATA = [
                 "id":"7.3.5.1",
                 "label":"Are indicators of the nutritional impacts of the intervention on target producer households included in the monitoring and evaluation plan?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-                  /*
-                    =if('Part 3.4'!M4:P4="yes","Yes",if('Part 3.4'!M4:P4="-","-",if('Part 3.4'!M10:P10="-","-",if(and('Part 3.4'!M4:P4="no",'Part 3.4'!M10:P10="yes"),"No but could so so",if(and('Part 3.4'!M4:P4="no",'Part 3.4'!M10:P10="no"),"No and could not do so")))))
-                  */
+                "value" : function (step, getResponse, any, all) {
                   var expSet = [
-                    responses['3.4.1'].answer[0] === '3.4.1.1.2',
-                    responses['3.4.3'].answer[0] === '3.4.3.1.1'
+                    getResponse('3.4.1', 0) === '3.4.1.1.2',
+                    getResponse('3.4.3', 0) === '3.4.3.1.1'
                   ], expSet2 = [
-                    responses['3.4.1'].answer[0] === '3.4.1.1.2',
-                    responses['3.4.3'].answer[0] === '3.4.3.1.2'
+                    getResponse('3.4.1', 0) === '3.4.1.1.2',
+                    getResponse('3.4.3', 0) === '3.4.3.1.2'
                   ];
 
-                  if (responses['3.4.1'].answer[0] === '3.4.1.1.1') {
+                  if (getResponse('3.4.1', 0) === '3.4.1.1.1') {
                     return 'Yes';
                   } else if (expSet) {
                     return 'No but could do so';
                   } else if (expSet2) {
-                    return 'No but could not do so';
+                    return 'No and could not do so';
                   }
                 }
               },
@@ -6668,8 +6734,15 @@ Decide.STEP_DATA = [
                 "id":"7.3.5.2",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-                  
+                "value" : function (step, getResponse, any, all, pastValues) {
+                  if (pastValues['7.3.5.1'] === 'Yes') {
+                    return 'No action needed';
+                  }
+                  if (pastValues['7.3.5.1'] === 'No and could not do so') {
+                    return 'Reconsider ability to make claims about nutritional impact of the intervention through increased consumption of the target food by target individuals';
+                  } else if (pastValues['7.3.5.1'] === 'No but could do so') {
+                    return 'Revise your monitoring and evaluation plan to include feasible nutritional indicators';
+                  }
                 }
               }
             ]
@@ -6686,40 +6759,116 @@ Decide.STEP_DATA = [
                 "id":"7.3.6.1",
                 "label":"Has an assessment of gender issues relating to consumption of the target food been undertaken?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('3.1.16', 0) === '3.1.16.1.2',
+                    getResponse('3.1.17', 0) === '3.1.17.1.1'
+                  ], expSet2 = [
+                    getResponse('3.1.16', 0) === '3.1.16.1.2',
+                    getResponse('3.1.17', 0) === '3.1.17.1.2'
+                  ];
 
+                  if (getResponse('3.1.16', 0) === '3.1.16.1.1') {
+                    return 'Yes'; 
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.3.6.2",
                 "label":"Have gender issues been identified and, if so, have they been acted upon?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  if (getResponse('3.1.19', 0) === '3.1.19.1.1') {
+                    return 'No issues identified';
+                  } else if (getResponse('3.1.19', 0) === '3.1.19.1.2') {
+                    return 'Issues identified and acted upon';
+                  } else {
+                    return 'Issues identified and not acted upon';
+                  }
                 }
               },
               {
                 "id":"7.3.6.3",
                 "label":"Has an assessment of gender issues relating to sourcing inputs and/or implementing improved production techniques been undertaken?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('3.3.14', 0) === '3.3.14.1.2',
+                    getResponse('3.3.15', 0) === '3.3.15.1.1'
+                  ], expSet2 = [
+                    getResponse('3.3.14', 0) === '3.3.14.1.2',
+                    getResponse('3.3.15', 0) === '3.3.15.1.2'
+                  ];
 
+                  if (getResponse('3.3.14', 0) === '3.3.14.1.1') {
+                    return 'Yes'; 
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.3.6.4",
                 "label":"Have gender issues been identified and, if so, have they been acted upon?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  if (getResponse('3.3.17', 0) === '3.3.17.1.1') {
+                    return 'No issues identified';
+                  } else if (getResponse('3.3.17', 0) === '3.3.17.1.2') {
+                    return 'Issues identified and acted upon';
+                  } else {
+                    return 'Issues identified and not acted upon';
+                  }
                 }
               },
               {
                 "id":"7.3.6.5",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all, pastValues) {
+                  debugger;
+                  var expSet = [
+                    pastValues['7.3.6.1'] === 'No and could not do so',
+                    pastValues['7.3.6.3'] === 'No and could not do so'
+                  ], expSet2 = [
+                    !!pastValues['7.3.6.2'],
+                    pastValues['7.3.6.2'] === 'Issues identified and not acted upon',
+                    !!pastValues['7.3.6.4'],
+                    pastValues['7.3.6.4'] === 'Issues identified and not acted upon',
+                  ], expSet3 = [
+                    pastValues['7.3.6.2'] === 'No issues identified',
+                    pastValues['7.3.6.2'] === 'Issues identified and acted upon',
+                    pastValues['7.3.6.4'] === 'No issues identified',
+                    pastValues['7.3.6.4'] === 'Issues identified and acted upon'
+                  ], expSet4 = [
+                    pastValues['7.3.6.2'] === 'Issues identified and not acted upon',
+                    pastValues['7.3.6.4'] === 'Issues identified and not acted upon'
+                  ], expSet5 = [
+                    pastValues['7.3.6.1'] === 'No and could not do so',
+                    pastValues['7.3.6.3'] === 'No but could do so'
+                  ];
 
+                  if (any(expSet)) {
+                    return 'Reconsider ability to make claims about gender issues associated with efforts to increase consumption of the target food by target producer households';
+                  }
+
+                  if (!any(expSet2) && any(expSet3)) {
+                    return 'No action needed';
+                  }
+
+                  if (any(expSet4)) {
+                    return 'Examine ways in which the identified gender issues can be addressed';
+                  }
+
+                  if (any(expSet5)) {
+                    return 'Examine how a gender assessment can be undertaken';
+                  }
                 }
               }
             ]
@@ -6736,23 +6885,55 @@ Decide.STEP_DATA = [
                 "id":"7.3.7.1",
                 "label":"Have opportunities for mobilizing the private sector to address challenges relating to sourcing inputs and/or applying improved production techniques been considered?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('3.3.7', 0) === '3.3.7.1.2',
+                    getResponse('3.3.8', 0) === '3.3.8.1.1'
+                  ], expSet2 = [
+                    getResponse('3.3.7', 0) === '3.3.7.1.2',
+                    getResponse('3.3.8', 0) === '3.3.8.1.2'
+                  ];
 
+                  if (getResponse('3.3.7', 0) === '3.3.7.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.3.7.2",
                 "label":"Have any opportunities for private sector mobilization been realised?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  if (getResponse('4.1.1', 0) === '4.1.1.1.1') {
+                    return 'Yes';
+                  } else {
+                    return 'No';
+                  }
                 }
               },
               {
                 "id":"7.3.7.3",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all, pastValues) {
+
+                  if (pastValues['7.3.7.1'] === 'Yes' && pastValues['7.3.7.2'] === 'Yes') {
+                    return 'No action needed';
+                  }
+
+                  if (pastValues['7.3.7.2'] === 'No') {
+                    return 'Explore scope for pursuing identified opportunities for private sector engagement';
+                  }
+
+                  if (pastValues['7.3.7.1'] === 'No but could do so') {
+                    return 'Explore ways in which this evidence can be gathered';
+                  } else if (pastValues['7.3.7.1'] === 'No and could not do so') {
+                    return 'Reconsider abiltiy to make claims about engagement with the private sector';
+                  }
 
                 }
               }
@@ -6765,8 +6946,8 @@ Decide.STEP_DATA = [
         "parent" : "7",
         "type" : "section",
         "title" : "Summary of findings of Part 4: Impact of the intervention on the nutrition of individuals not directly assisted by the intervention: ",
-        "subtitle" : function (step, responses, any, all) {
-
+        "subtitle" : function (step, getResponse, any, all) {
+          return getResponse('4.1.2', 0);
         },
         "description" : "Here the results of Part 4 of the assessment are summarized, providing an overview of the challenges involved and addressed in enhancing consumption of the target food by individuals who are not directly assisted by the intervention.  The assessment for the first of the two target consumer groups is presented here.",
         "steps" : [
@@ -6782,24 +6963,64 @@ Decide.STEP_DATA = [
                 "id":"7.4.1.1",
                 "label":"Do you know that some or all of these individuals lack the nutrients supplied by the food?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('4.1.3', 0) === '4.1.3.1.2',
+                    getResponse('4.1.4', 0) === '4.1.4.1.1'
+                  ], expSet2 = [
+                    getResponse('4.1.4', 0) === '4.1.4.1.2',
+                    getResponse('4.1.3', 0) === '4.1.3.1.2'
+                  ];
 
+                  if (getResponse('4.1.3', 0) === '4.1.3.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could find out';
+                  } else if (all(expSet2)) {
+                    return 'No and could not find out';
+                  }
                 }
               },
               {
                 "id":"7.4.1.2",
                 "label":"Do you know that some or all individuals in the target producer households would consume (more of) this food if it was made available to them?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('4.1.9', 0)  === '4.1.9.1.2',
+                    getResponse('4.1.11', 0) === '4.1.11.1.1'
+                  ], expSet2 = [
+                    getResponse('4.1.9', 0)  === '4.1.9.1.2',
+                    getResponse('4.1.11', 0) === '4.1.11.1.2'
+                  ];
 
+                  if (getResponse('4.1.3', 0) === '4.1.3.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could find out';
+                  } else if (all(expSet2)) {
+                    return 'No and could not find out';
+                  }
                 }
               },
               {
                 "id":"7.4.1.3",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all, pastValues) {
+                  if (pastValues['7.4.1.1'] === 'Yes' && pastValues['7.4.1.2'] === 'Yes') {
+                    return 'No action needed';
+                  }
 
+                  if (pastValues['7.4.1.1'] === 'No but could find out' || 
+                      pastValues['7.4.1.2'] === 'No but could find out') {
+                    return 'Explore ways in which this evidence can be gathered';
+                  }
+
+                  if (pastValues['7.4.1.1'] === 'No and could not find out' || 
+                      pastValues['7.4.1.2'] === 'No and could not find out') {
+                    return 'Reconsider ability to make claims about nutritional impact of the intervention through increased consumption of the target food on target individuals';
+                  }
                 }
               }
             ]
@@ -6816,48 +7037,144 @@ Decide.STEP_DATA = [
                 "id":"7.4.2.1",
                 "label":"Have challenges with acceptability of the target food to these individuals been identified?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('4.1.12', 0) === '4.1.12.1.2',
+                    getResponse('4.1.13', 0) === '4.1.13.1.1'
+                  ], expSet2 = [
+                    getResponse('4.1.12', 0) === '4.1.12.1.2',
+                    getResponse('4.1.13', 0) === '4.1.13.1.2'
+                  ];
 
+                  if (getResponse('4.1.12', 0) === '4.1.12.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.4.2.2",
                 "label":"Have challenges associated with distributing and marketing the target food in value chains to these individuals been identified?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('4.2.2', 0) === '4.2.2.1.2',
+                    getResponse('4.2.3', 0) === '4.2.3.1.1'
+                  ], expSet2 = [
+                    getResponse('4.2.2', 0) === '4.2.2.1.2',
+                    getResponse('4.2.3', 0) === '4.2.3.1.2'
+                  ];
 
+                  if (getResponse('4.2.2', 0) === '4.2.2.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.4.2.3",
                 "label":"Have challenges associated with preserving the nutritional value of the target food during distribution and marketing been identified?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('4.2.7', 0) === '4.2.7.1.2',
+                    getResponse('4.2.8', 0) === '4.2.8.1.1'
+                  ], expSet2 = [
+                    getResponse('4.2.7', 0) === '4.2.7.1.2',
+                    getResponse('4.2.8', 0) === '4.2.8.1.2'
+                  ];
 
+                  if (getResponse('4.2.7', 0) === '4.2.7.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.4.2.4",
                 "label":"Have challenges associated with storing, transporting and processing the target food in value chains to these individuals been identified?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('4.3.1', 0) === '4.3.1.1.2',
+                    getResponse('4.3.2', 0) === '4.3.2.1.1'
+                  ], expSet2 = [
+                    getResponse('4.3.1', 0) === '4.3.1.1.2',
+                    getResponse('4.3.2', 0) === '4.3.2.1.2'
+                  ];
 
+                  if (getResponse('4.3.1', 0) === '4.3.1.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.4.2.5",
                 "label":"Have challenges associated with preserving the nutritional value of the target food during storage, transport and processing been identified?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('4.3.6', 0) === '4.3.6.1.2',
+                    getResponse('4.3.7', 0) === '4.3.7.1.1'
+                  ], expSet2 = [
+                    getResponse('4.3.6', 0) === '4.3.6.1.2',
+                    getResponse('4.3.7', 0) === '4.3.7.1.2'
+                  ];
 
+                  if (getResponse('4.3.6', 0) === '4.3.1.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.4.2.6",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all, pastValues) {
+                  var expSet = [
+                    pastValues['7.4.2.1'] === 'Yes',
+                    pastValues['7.4.2.2'] === 'Yes',
+                    pastValues['7.4.2.3'] === 'Yes',
+                    pastValues['7.4.2.4'] === 'Yes',
+                    pastValues['7.4.2.5'] === 'Yes'
+                  ], expSet2 = [
+                    pastValues['7.4.2.1'] === 'No but could do so',
+                    pastValues['7.4.2.2'] === 'No but could do so',
+                    pastValues['7.4.2.3'] === 'No but could do so',
+                    pastValues['7.4.2.4'] === 'No but could do so',
+                    pastValues['7.4.2.5'] === 'No but could do so'
+                  ], expSet3 = [
+                    pastValues['7.4.2.1'] === 'No and could not do so',
+                    pastValues['7.4.2.2'] === 'No and could not do so',
+                    pastValues['7.4.2.3'] === 'No and could not do so',
+                    pastValues['7.4.2.4'] === 'No and could not do so',
+                    pastValues['7.4.2.5'] === 'No and could not do so'
+                  ];
 
+                  if (all(expSet)) {
+                    return 'No action needed';
+                  } else if (all(expSet2)) {
+                    return 'Undertake assessment of challenges in areas where this has not been concluded';
+                  } else if (all(expSet3)) {
+                    return 'Reconsider abiltiy to make claims about nutritional impact of the intervention through increased consumption of the target food by target producer households';
+                  }
                 }
               }
             ]
@@ -6874,56 +7191,235 @@ Decide.STEP_DATA = [
                 "id":"7.4.3.1",
                 "label":"Have all substantive challenges with acceptability of the target food to these individuals been addressed?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('4.1.16', 2)  === '4.1.16.1.1.3.4',
+                    getResponse('4.1.16', 2)  === '4.1.16.1.1.3.3',
+                    getResponse('4.1.16', 5)  === '4.1.16.1.2.3.4',
+                    getResponse('4.1.16', 5)  === '4.1.16.1.2.3.3',
+                    getResponse('4.1.16', 8)  === '4.1.16.1.3.3.4',
+                    getResponse('4.1.16', 8)  === '4.1.16.1.3.3.3',
+                    getResponse('4.1.16', 11) === '4.1.16.1.4.3.4',
+                    getResponse('4.1.16', 11) === '4.1.16.1.4.3.3',
+                    getResponse('4.1.16', 14) === '4.1.16.1.5.3.4',
+                    getResponse('4.1.16', 14) === '4.1.16.1.5.3.3'
+                  ], expSet2 = [
+                    getResponse('4.1.16', 2)  === '4.1.16.1.1.3.5',
+                    getResponse('4.1.16', 5)  === '4.1.16.1.2.3.5',
+                    getResponse('4.1.16', 8)  === '4.1.16.1.3.3.5',
+                    getResponse('4.1.16', 11) === '4.1.16.1.4.3.5',
+                    getResponse('4.1.16', 14) === '4.1.16.1.5.3.5'
+                  ];
 
+                  if (any[expSet]) {
+                    return "No but scope to do so";
+                  } else if (any[expSet2]) {
+                    return "No and no scope to resolve";
+                  } else {
+                    return "Yes";
+                  }
                 }
               },
               {
                 "id":"7.4.3.2",
                 "label":"Have all substantive challenges associated with preserving the nutritional value of the target food during home storage, preparation and/or cooking been addressed?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('4.1.21', 2)  === '4.1.21.1.1.3.4',
+                    getResponse('4.1.21', 2)  === '4.1.21.1.1.3.3',
+                    getResponse('4.1.21', 5)  === '4.1.21.1.2.3.4',
+                    getResponse('4.1.21', 5)  === '4.1.21.1.2.3.3',
+                    getResponse('4.1.21', 8)  === '4.1.21.1.3.3.4',
+                    getResponse('4.1.21', 8)  === '4.1.21.1.3.3.3',
+                    getResponse('4.1.21', 11) === '4.1.21.1.4.3.4',
+                    getResponse('4.1.21', 11) === '4.1.21.1.4.3.3',
+                    getResponse('4.1.21', 14) === '4.1.21.1.5.3.4',
+                    getResponse('4.1.21', 14) === '4.1.21.1.5.3.3'
+                  ], expSet2 = [
+                    getResponse('4.1.21', 2)  === '4.1.21.1.1.3.5',
+                    getResponse('4.1.21', 5)  === '4.1.21.1.2.3.5',
+                    getResponse('4.1.21', 8)  === '4.1.21.1.3.3.5',
+                    getResponse('4.1.21', 11) === '4.1.21.1.4.3.5',
+                    getResponse('4.1.21', 14) === '4.1.21.1.5.3.5'
+                  ];
 
+                  if (any[expSet]) {
+                    return "No but scope to do so";
+                  } else if (any[expSet2]) {
+                    return "No and no scope to resolve";
+                  } else {
+                    return "Yes";
+                  }
                 }
               },
               {
                 "id":"7.4.3.3",
                 "label":"Have all substantive challenges associated with distributing and marketing the target food in value chains to these individuals been addressed?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('4.2.6', 2)  === '4.2.6.1.1.3.4',
+                    getResponse('4.2.6', 2)  === '4.2.6.1.1.3.3',
+                    getResponse('4.2.6', 5)  === '4.2.6.1.2.3.4',
+                    getResponse('4.2.6', 5)  === '4.2.6.1.2.3.3',
+                    getResponse('4.2.6', 8)  === '4.2.6.1.3.3.4',
+                    getResponse('4.2.6', 8)  === '4.2.6.1.3.3.3',
+                    getResponse('4.2.6', 11) === '4.2.6.1.4.3.4',
+                    getResponse('4.2.6', 11) === '4.2.6.1.4.3.3',
+                    getResponse('4.2.6', 14) === '4.2.6.1.5.3.4',
+                    getResponse('4.2.6', 14) === '4.2.6.1.5.3.3'
+                  ], expSet2 = [
+                    getResponse('4.2.6', 2)  === '4.2.6.1.1.3.5',
+                    getResponse('4.2.6', 5)  === '4.2.6.1.2.3.5',
+                    getResponse('4.2.6', 8)  === '4.2.6.1.3.3.5',
+                    getResponse('4.2.6', 11) === '4.2.6.1.4.3.5',
+                    getResponse('4.2.6', 14) === '4.2.6.1.5.3.5'
+                  ];
 
+                  if (any[expSet]) {
+                    return "No but scope to do so";
+                  } else if (any[expSet2]) {
+                    return "No and no scope to resolve";
+                  } else {
+                    return "Yes";
+                  }
                 }
               },
               {
                 "id":"7.4.3.4",
                 "label":"Have all substantive challenges associated with preserving the nutritional value of the target food during distribution and marketing been addressed?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('4.2.11', 2)  === '4.2.11.1.1.3.4',
+                    getResponse('4.2.11', 2)  === '4.2.11.1.1.3.3',
+                    getResponse('4.2.11', 5)  === '4.2.11.1.2.3.4',
+                    getResponse('4.2.11', 5)  === '4.2.11.1.2.3.3',
+                    getResponse('4.2.11', 8)  === '4.2.11.1.3.3.4',
+                    getResponse('4.2.11', 8)  === '4.2.11.1.3.3.3',
+                    getResponse('4.2.11', 11) === '4.2.11.1.4.3.4',
+                    getResponse('4.2.11', 11) === '4.2.11.1.4.3.3',
+                    getResponse('4.2.11', 14) === '4.2.11.1.5.3.4',
+                    getResponse('4.2.11', 14) === '4.2.11.1.5.3.3'
+                  ], expSet2 = [
+                    getResponse('4.2.11', 2)  === '4.2.11.1.1.3.5',
+                    getResponse('4.2.11', 5)  === '4.2.11.1.2.3.5',
+                    getResponse('4.2.11', 8)  === '4.2.11.1.3.3.5',
+                    getResponse('4.2.11', 11) === '4.2.11.1.4.3.5',
+                    getResponse('4.2.11', 14) === '4.2.11.1.5.3.5'
+                  ];
 
+                  if (any[expSet]) {
+                    return "No but scope to do so";
+                  } else if (any[expSet2]) {
+                    return "No and no scope to resolve";
+                  } else {
+                    return "Yes";
+                  }
                 }
               },
               {
                 "id":"7.4.3.5",
                 "label":"Have all substantive challenges associated with storing, transporting and processing the target food in value chains to these individuals been addressed?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('4.3.5', 2)  === '4.3.5.1.1.3.4',
+                    getResponse('4.3.5', 2)  === '4.3.5.1.1.3.3',
+                    getResponse('4.3.5', 5)  === '4.3.5.1.2.3.4',
+                    getResponse('4.3.5', 5)  === '4.3.5.1.2.3.3',
+                    getResponse('4.3.5', 8)  === '4.3.5.1.3.3.4',
+                    getResponse('4.3.5', 8)  === '4.3.5.1.3.3.3',
+                    getResponse('4.3.5', 11) === '4.3.5.1.4.3.4',
+                    getResponse('4.3.5', 11) === '4.3.5.1.4.3.3',
+                    getResponse('4.3.5', 14) === '4.3.5.1.5.3.4',
+                    getResponse('4.3.5', 14) === '4.3.5.1.5.3.3'
+                  ], expSet2 = [
+                    getResponse('4.3.5', 2)  === '4.3.5.1.1.3.5',
+                    getResponse('4.3.5', 5)  === '4.3.5.1.2.3.5',
+                    getResponse('4.3.5', 8)  === '4.3.5.1.3.3.5',
+                    getResponse('4.3.5', 11) === '4.3.5.1.4.3.5',
+                    getResponse('4.3.5', 14) === '4.3.5.1.5.3.5'
+                  ];
 
+                  if (any[expSet]) {
+                    return "No but scope to do so";
+                  } else if (any[expSet2]) {
+                    return "No and no scope to resolve";
+                  } else {
+                    return "Yes";
+                  }
                 }
               },
               {
                 "id":"7.4.3.6",
                 "label":"Have all substantive challenges associated with preserving the nutritional value of the target food during storage, transport and processing been addressed?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('4.3.10', 2)  === '4.3.10.1.1.3.4',
+                    getResponse('4.3.10', 2)  === '4.3.10.1.1.3.3',
+                    getResponse('4.3.10', 5)  === '4.3.10.1.2.3.4',
+                    getResponse('4.3.10', 5)  === '4.3.10.1.2.3.3',
+                    getResponse('4.3.10', 8)  === '4.3.10.1.3.3.4',
+                    getResponse('4.3.10', 8)  === '4.3.10.1.3.3.3',
+                    getResponse('4.3.10', 11) === '4.3.10.1.4.3.4',
+                    getResponse('4.3.10', 11) === '4.3.10.1.4.3.3',
+                    getResponse('4.3.10', 14) === '4.3.10.1.5.3.4',
+                    getResponse('4.3.10', 14) === '4.3.10.1.5.3.3'
+                  ], expSet2 = [
+                    getResponse('4.3.10', 2)  === '4.3.10.1.1.3.5',
+                    getResponse('4.3.10', 5)  === '4.3.10.1.2.3.5',
+                    getResponse('4.3.10', 8)  === '4.3.10.1.3.3.5',
+                    getResponse('4.3.10', 11) === '4.3.10.1.4.3.5',
+                    getResponse('4.3.10', 14) === '4.3.10.1.5.3.5'
+                  ];
 
+                  if (any[expSet]) {
+                    return "No but scope to do so";
+                  } else if (any[expSet2]) {
+                    return "No and no scope to resolve";
+                  } else {
+                    return "Yes";
+                  }
                 }
               },
               {
                 "id":"7.4.3.7",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    pastValues['7.4.3.1'] === 'Yes',
+                    pastValues['7.4.3.2'] === 'Yes',
+                    pastValues['7.4.3.3'] === 'Yes',
+                    pastValues['7.4.3.4'] === 'Yes',
+                    pastValues['7.4.3.5'] === 'Yes',
+                    pastValues['7.4.3.6'] === 'Yes'
+                  ], expSet2 = [
+                    pastValues['7.3.4.1'] === 'No but scope to do so',
+                    pastValues['7.3.4.2'] === 'No but scope to do so',
+                    pastValues['7.3.4.3'] === 'No but scope to do so',
+                    pastValues['7.3.4.4'] === 'No but scope to do so',
+                    pastValues['7.3.4.5'] === 'No but scope to do so',
+                    pastValues['7.3.4.6'] === 'No but scope to do so'
+                  ], expSet3 = [
+                    pastValues['7.3.4.1'] === 'No and no scope to resolve',
+                    pastValues['7.3.4.2'] === 'No and no scope to resolve',
+                    pastValues['7.3.4.3'] === 'No and no scope to resolve',
+                    pastValues['7.3.4.4'] === 'No and no scope to resolve',
+                    pastValues['7.3.4.5'] === 'No and no scope to resolve',
+                    pastValues['7.3.4.6'] === 'No and no scope to resolve'
+                  ];
 
+                  if (any(expSet)) {
+                    return 'No action needed';
+                  } else if (any(expSet2)) {
+                    return 'Explore options for resolving the remaining substantive challenges';
+                  } else if (any(expSet3)) {
+                    return 'Reconsider ability to make claims about nutritional impact of the intervention through increased consumption of the target food by target producer households';
+                  }
                 }
               }
             ]
@@ -6940,16 +7436,39 @@ Decide.STEP_DATA = [
                 "id":"7.4.4.1",
                 "label":"Are indicators of the nutritional impacts of the intervention on target producer households included in the monitoring and evaluation plan?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('4.4.1', 0) === '4.4.1.1.2',
+                    getResponse('4.4.3', 0) === '4.4.3.1.1'
+                  ], expSet2 = [
+                    getResponse('4.4.1', 0) === '4.4.1.1.2',
+                    getResponse('4.4.3', 0) === '4.4.3.1.2'
+                  ];
 
+                  if (getResponse('4.4.1', 0) === '4.4.1.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.4.4.2",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all, pastValues) {
+                  if (pastValues['7.4.4.1'] === 'Yes') {
+                    return 'No action needed';
+                  }
+                  if (pastValues['7.4.4.1'] === 'No and could not do so') {
+                    return 'Reconsider ability to make claims about nutritional impact of the intervention through increased consumption of the target food by target individuals';
+                  }
+                  if (pastValues['7.4.4.1'] === 'No but could do so') {
+                    return 'Revise your monitoring and evaluation plan to include feasible nutritional indicators';
+                  }
+                  // (!) Last part of recommendation formula cannot be translated
                 }
               }
             ]
@@ -6966,56 +7485,128 @@ Decide.STEP_DATA = [
                 "id":"7.4.5.1",
                 "label":"Has an assessment of gender issues relating to consumption of the target food by these individuals been undertaken?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('4.1.22', 0) === '4.1.22.1.2',
+                    getResponse('4.1.23', 0) === '4.1.23.1.1'
+                  ], expSet2 = [
+                    getResponse('4.1.22', 0) === '4.1.22.1.2',
+                    getResponse('4.1.23', 0) === '4.1.23.1.2'
+                  ];
 
+                  if (getResponse('4.1.22', 0) === '4.1.22.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.4.5.2",
                 "label":"Have gender issues relating to consumption of the target food by these individuals been identified and, if so, have they been acted upon?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  return getResponse('4.1.25', 0);
                 }
               },
               {
                 "id":"7.4.5.3",
                 "label":"Has an assessment of gender issues relating to distributing and marketing the target product in value chains to these individuals been undertaken?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('4.2.19', 0) === '4.2.19.1.2',
+                    getResponse('4.2.20', 0) === '4.2.20.1.1'
+                  ], expSet2 = [
+                    getResponse('4.2.19', 0) === '4.2.19.1.2',
+                    getResponse('4.2.20', 0) === '4.2.20.1.2'
+                  ];
 
+                  if (getResponse('4.2.19', 0) === '4.2.19.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.4.5.4",
                 "label":"Have gender issues relating to distributing and marketing the target food in value chains to these individuals been identified and, if so, have they been acted upon?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  return getResponse('4.2.22', 0);
                 }
               },
               {
                 "id":"7.4.5.5",
                 "label":"Has an assessment of gender issues relating to storing, transporting and processing the target food in value chains to these individuals been undertaken?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('4.3.18', 0) === '4.3.18.1.2',
+                    getResponse('4.3.19', 0) === '4.3.19.1.1'
+                  ], expSet2 = [
+                    getResponse('4.3.18', 0) === '4.3.18.1.2',
+                    getResponse('4.3.19', 0) === '4.3.19.1.2'
+                  ];
 
+                  if (getResponse('4.3.18', 0) === '4.3.18.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.4.5.6",
                 "label":"Have gender issues relating to storing, transporting and processing the target food in value chains to these individuals been identified and, if so, have they been acted upon?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  debugger;
+                  return getResponse('4.3.21', 0);
                 }
               },
               {
                 "id":"7.4.5.7",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all, pastValues) {
+                  var expSet = [
+                    pastValues['7.4.5.1'] === 'No and could not do so',
+                    pastValues['7.4.5.3'] === 'No and could not do so',
+                    pastValues['7.4.5.5'] === 'No and could not do so'
+                  ], expSet2 = [
+                    pastValues['7.4.5.2'] === 'No issues identified',
+                    pastValues['7.4.5.2'] === 'Issues identified but not acted upon',
+                    pastValues['7.4.5.4'] === 'No issues identified',
+                    pastValues['7.4.5.4'] === 'Issues identified but not acted upon',
+                    pastValues['7.4.5.6'] === 'No issues identified',
+                    pastValues['7.4.5.6'] === 'Issues identified but not acted upon'
+                  ], expSet3 = [
+                    pastValues['7.4.5.2'] === 'Issues identified but not acted upon',
+                    pastValues['7.4.5.4'] === 'Issues identified but not acted upon',
+                    pastValues['7.4.5.6'] === 'Issues identified but not acted upon'
+                  ], expSet4 = [
+                    pastValues['7.4.5.1'] === 'No but could do so',
+                    pastValues['7.4.5.3'] === 'No but could do so',
+                    pastValues['7.4.5.5'] === 'No but could do so'
+                  ];
 
+                  if (any(expSet)) {
+                    return 'Reconsider ability to make claims about gender issues associated with efforts to increase consumption of the target food by target producer households';
+                  } else if (any(expSet2)) {
+                    return 'No action needed';
+                  } else if (any(expSet3)) {
+                    return 'Examine ways in which the identified gender issues can be addressed';
+                  } else if (any(expSet4)) {
+                    return 'Examine how a gender assessment can be undertaken';
+                  }
                 }
               }
             ]
@@ -7032,40 +7623,92 @@ Decide.STEP_DATA = [
                 "id":"7.4.6.1",
                 "label":"Have opportunities for mobilizing the private sector to address challenges relating to distributing and marketing the target food in value chains to these individuals been considered?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('4.2.18', 0) === '4.2.18.1.2',
+                    getResponse('4.2.19', 0) === '4.2.19.1.1'
+                  ], expSet2 = [
+                    getResponse('4.2.18', 0) === '4.2.18.1.2',
+                    getResponse('4.2.19', 0) === '4.2.19.1.2'
+                  ];
 
+                  if (getResponse('4.2.18', 0) === '4.2.18.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.4.6.2",
                 "label":"Have any opportunities for private sector mobilization to address challenges relating to distributing and marketing the target food in value chains to these individuals been realised?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  return getResponse('4.2.17', 0);
                 }
               },
               {
                 "id":"7.4.6.3",
                 "label":"Have opportunities for mobilizing the private sector to address challenges relating to storing, transporting and processing the target food in value chains to these individuals been undertaken?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('4.3.11', 0) === '4.3.11.1.2',
+                    getResponse('4.3.12', 0) === '4.3.12.1.1'
+                  ], expSet2 = [
+                    getResponse('4.3.11', 0) === '4.3.11.1.2',
+                    getResponse('4.3.12', 0) === '4.3.12.1.2'
+                  ];
 
+                  if (getResponse('4.3.11', 0) === '4.3.11.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.4.6.4",
                 "label":"Have any opportunities for private sector mobilization to address challenges relating to storing, transporting and processing the target food in value chains to these individuals been realised?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  return getResponse('4.3.16', 0);
                 }
               },
               {
                 "id":"7.4.6.5",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all, pastValues) {
+                  var expSet = [
+                    pastValues['7.4.6.1'] === 'Yes',
+                    pastValues['7.4.6.2'] === 'Yes',
+                    pastValues['7.4.6.3'] === 'Yes',
+                    pastValues['7.4.6.4'] === 'Yes'
+                  ], expSet2 = [
+                    pastValues['7.4.6.2'] === 'No',
+                    pastValues['7.4.6.4'] === 'No'
+                  ], expSet3 = [
+                    pastValues['7.4.6.1'] === 'No but could do so',
+                    pastValues['7.4.6.3'] === 'No but could do so'
+                  ], expSet4 = [
+                    pastValues['7.4.6.1'] === 'No and could not do so',
+                    pastValues['7.4.6.3'] === 'No and could not do so'
+                  ];
 
+                  if (any(expSet)) {
+                    return 'No action needed';
+                  } else if (any(expSet2)) {
+                    return 'Explore scope for pursuing identified opportunities for private sector engagement';
+                  } else if (any(expSet3)) {
+                    return 'Explore ways in which this evidence can be gathered';
+                  } else if (any(expSet4)) {
+                    return 'Reconsider abiltiy to make claims about engagement with the private sector';
+                  }
                 }
               }
             ]
@@ -7077,8 +7720,8 @@ Decide.STEP_DATA = [
         "parent" : "7",
         "type" : "section",
         "title" : "Summary of findings of Part 5: Impact of the intervention on the nutrition of individuals not directly assisted by the intervention: ",
-        "subtitle" : function (step, responses, any, all) {
-
+        "subtitle" : function (step, getResponse, any, all) {
+          return getResponse('4.1.2', 0);
         },
         "description" : "Here the results of Part 5 of the assessment are summarized, providing an overview of the challenges involved and addressed in enhancing consumption of the target food by individuals who are not directly assisted by the intervention.  The assessment for the second of the two target consumer groups is presented here.",
         "steps" : [
@@ -7094,24 +7737,69 @@ Decide.STEP_DATA = [
                 "id":"7.5.1.1",
                 "label":"Do you know that some or all of these individuals lack the nutrients supplied by the food?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('5.1.1', 0) === '5.1.1.1.2',
+                    getResponse('5.1.2', 0) === '5.1.2.1.1'
+                  ], expSet2 = [
+                    getResponse('5.1.1', 0) === '5.1.1.1.2',
+                    getResponse('5.1.2', 0) === '5.1.2.1.2'
+                  ];
 
+                  if (getResponse('5.1.1', 0) === '5.1.1.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.5.1.2",
                 "label":"Do you know that some or all individuals in the target producer households would consume (more of) this food if it was made available to them?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('5.1.7', 0) === '5.1.7.1.2',
+                    getResponse('5.1.9', 0) === '5.1.9.1.1'
+                  ], expSet2 = [
+                    getResponse('5.1.7', 0) === '5.1.7.1.2',
+                    getResponse('5.1.9', 0) === '5.1.9.1.2'
+                  ];
 
+                  if (getResponse('5.1.7', 0) === '5.1.7.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.5.1.3",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all, pastValues) {
+                  var expSet = [
+                    pastValues['7.5.1.1'] === 'Yes',
+                    pastValues['7.5.1.2'] === 'Yes'
+                  ], expSet2 = [
+                    pastValues['7.5.1.1'] === 'No but could do so',
+                    pastValues['7.5.1.2'] === 'No but could do so'
+                  ], expSet3 = [
+                    pastValues['7.5.1.1'] === 'No and could not do so',
+                    pastValues['7.5.1.2'] === 'No and could not do so'
+                  ];
 
+                  if (all(expSet)) {
+                    return 'No action needed';
+                  } else if (any(expSet2)) {
+                    return 'Explore ways in which this evidence can be gathered';
+                  } else if (any(expSet3)) {
+                    return 'Reconsider ability to make claims about nutritional impact of the intervention through increased consumption of the target food on target individuals';
+                  }
                 }
               }
             ]
@@ -7128,48 +7816,146 @@ Decide.STEP_DATA = [
                 "id":"7.5.2.1",
                 "label":"Have challenges with acceptability of the target food to these individuals been identified?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('5.1.10', 0) === '5.1.10.1.2',
+                    getResponse('5.1.11', 0) === '5.1.11.1.1'
+                  ], expSet2 = [
+                    getResponse('5.1.10', 0) === '5.1.10.1.2',
+                    getResponse('5.1.11', 0) === '5.1.11.1.2'
+                  ];
 
+                  if (getResponse('5.1.10', 0) === '5.1.10.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.5.2.2",
                 "label":"Have challenges associated with distributing and marketing the target food in value chains to these individuals been identified?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('5.2.1', 0) === '5.2.1.1.2',
+                    getResponse('5.2.2', 0) === '5.2.2.1.1'
+                  ], expSet2 = [
+                    getResponse('5.2.1', 0) === '5.2.1.1.2',
+                    getResponse('5.2.2', 0) === '5.2.2.1.2'
+                  ];
 
+                  if (getResponse('5.2.1', 0) === '5.2.1.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.5.2.3",
                 "label":"Have challenges associated with preserving the nutritional value of the target food during distribution and marketing been identified?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('5.2.7', 0) === '5.2.7.1.2',
+                    getResponse('5.2.8', 0) === '5.2.8.1.1'
+                  ], expSet2 = [
+                    getResponse('5.2.7', 0) === '5.2.7.1.2',
+                    getResponse('5.2.8', 0) === '5.2.8.1.2'
+                  ];
 
+                  if (getResponse('5.2.7', 0) === '5.2.7.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.5.2.4",
                 "label":"Have challenges associated with storing, transporting and processing the target food in value chains to these individuals been identified?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('5.3.1', 0) === '5.3.1.1.2',
+                    getResponse('5.3.2', 0) === '5.3.2.1.1'
+                  ], expSet2 = [
+                    getResponse('5.3.1', 0) === '5.3.1.1.2',
+                    getResponse('5.3.2', 0) === '5.3.2.1.2'
+                  ];
 
+                  if (getResponse('5.3.1', 0) === '5.3.1.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.5.2.5",
                 "label":"Have challenges associated with preserving the nutritional value of the target food during storage, transport and processing been identified?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  debugger;
+                  var expSet = [
+                    getResponse('5.3.6', 0) === '5.3.6.1.2',
+                    getResponse('5.3.7', 0) === '5.3.7.1.1'
+                  ], expSet2 = [
+                    getResponse('5.3.6', 0) === '5.3.6.1.2',
+                    getResponse('5.3.7', 0) === '5.3.7.1.2'
+                  ];
 
+                  if (getResponse('5.3.6', 0) === '5.3.6.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.5.2.6",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all, pastValues) {
+                  debugger;
+                  var expSet = [
+                    pastValues['7.5.2.1'] === 'Yes',
+                    pastValues['7.5.2.2'] === 'Yes',
+                    pastValues['7.5.2.3'] === 'Yes',
+                    pastValues['7.5.2.4'] === 'Yes',
+                    pastValues['7.5.2.5'] === 'Yes'
+                  ], expSet2 = [
+                    pastValues['7.5.2.1'] === 'No but could do so',
+                    pastValues['7.5.2.2'] === 'No but could do so',
+                    pastValues['7.5.2.3'] === 'No but could do so',
+                    pastValues['7.5.2.4'] === 'No but could do so',
+                    pastValues['7.5.2.5'] === 'No but could do so'
+                  ], expSet3 = [
+                    pastValues['7.5.2.1'] === 'No and could not do so',
+                    pastValues['7.5.2.2'] === 'No and could not do so',
+                    pastValues['7.5.2.3'] === 'No and could not do so',
+                    pastValues['7.5.2.4'] === 'No and could not do so',
+                    pastValues['7.5.2.5'] === 'No and could not do so'
+                  ];
 
+                  if (all(expSet)) {
+                    return 'No action needed';
+                  } else if (any(expSet2)) {
+                    return 'Undertake assessment of challenges in areas where this has not been concluded';
+                  } else if (any(expSet3)) {
+                    return 'Reconsider abiltiy to make claims about nutritional impact of the intervention through increased consumption of the target food by target producer households';
+                  }
                 }
               }
             ]
@@ -7186,56 +7972,236 @@ Decide.STEP_DATA = [
                 "id":"7.5.3.1",
                 "label":"Have all substantive challenges with acceptability of the target food to these individuals been addressed?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('5.1.14', 2)  === '5.1.14.1.1.3.4',
+                    getResponse('5.1.14', 2)  === '5.1.14.1.1.3.3',
+                    getResponse('5.1.14', 5)  === '5.1.14.1.2.3.4',
+                    getResponse('5.1.14', 5)  === '5.1.14.1.2.3.3',
+                    getResponse('5.1.14', 8)  === '5.1.14.1.3.3.4',
+                    getResponse('5.1.14', 8)  === '5.1.14.1.3.3.3',
+                    getResponse('5.1.14', 11) === '5.1.14.1.4.3.4',
+                    getResponse('5.1.14', 11) === '5.1.14.1.4.3.3',
+                    getResponse('5.1.14', 14) === '5.1.14.1.5.3.4',
+                    getResponse('5.1.14', 14) === '5.1.14.1.5.3.3'
+                  ], expSet2 = [
+                    getResponse('5.1.14', 2)  === '5.1.14.1.1.3.5',
+                    getResponse('5.1.14', 5)  === '5.1.14.1.2.3.5',
+                    getResponse('5.1.14', 8)  === '5.1.14.1.3.3.5',
+                    getResponse('5.1.14', 11) === '5.1.14.1.4.3.5',
+                    getResponse('5.1.14', 14) === '5.1.14.1.5.3.5'
+                  ];
 
+                  if (any[expSet]) {
+                    return "No but scope to do so";
+                  } else if (any[expSet2]) {
+                    return "No and no scope to resolve";
+                  } else {
+                    return "Yes";
+                  }
                 }
               },
               {
                 "id":"7.5.3.2",
                 "label":"Have all substantive challenges associated with preserving the nutritional value of the target food during home storage, preparation and/or cooking been addressed?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('4.2.19', 2)  === '4.2.19.1.1.3.4',
+                    getResponse('4.2.19', 2)  === '4.2.19.1.1.3.3',
+                    getResponse('4.2.19', 5)  === '4.2.19.1.2.3.4',
+                    getResponse('4.2.19', 5)  === '4.2.19.1.2.3.3',
+                    getResponse('4.2.19', 8)  === '4.2.19.1.3.3.4',
+                    getResponse('4.2.19', 8)  === '4.2.19.1.3.3.3',
+                    getResponse('4.2.19', 11) === '4.2.19.1.4.3.4',
+                    getResponse('4.2.19', 11) === '4.2.19.1.4.3.3',
+                    getResponse('4.2.19', 14) === '4.2.19.1.5.3.4',
+                    getResponse('4.2.19', 14) === '4.2.19.1.5.3.3'
+                  ], expSet2 = [
+                    getResponse('4.2.19', 2)  === '4.2.19.1.1.3.5',
+                    getResponse('4.2.19', 5)  === '4.2.19.1.2.3.5',
+                    getResponse('4.2.19', 8)  === '4.2.19.1.3.3.5',
+                    getResponse('4.2.19', 11) === '4.2.19.1.4.3.5',
+                    getResponse('4.2.19', 14) === '4.2.19.1.5.3.5'
+                  ];
 
+                  if (any[expSet]) {
+                    return "No but scope to do so";
+                  } else if (any[expSet2]) {
+                    return "No and no scope to resolve";
+                  } else {
+                    return "Yes";
+                  }
                 }
               },
               {
                 "id":"7.5.3.3",
                 "label":"Have all substantive challenges associated with distributing and marketing the target food in value chains to these individuals been addressed?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('5.2.6', 2)  === '5.2.6.1.1.3.4',
+                    getResponse('5.2.6', 2)  === '5.2.6.1.1.3.3',
+                    getResponse('5.2.6', 5)  === '5.2.6.1.2.3.4',
+                    getResponse('5.2.6', 5)  === '5.2.6.1.2.3.3',
+                    getResponse('5.2.6', 8)  === '5.2.6.1.3.3.4',
+                    getResponse('5.2.6', 8)  === '5.2.6.1.3.3.3',
+                    getResponse('5.2.6', 11) === '5.2.6.1.4.3.4',
+                    getResponse('5.2.6', 11) === '5.2.6.1.4.3.3',
+                    getResponse('5.2.6', 14) === '5.2.6.1.5.3.4',
+                    getResponse('5.2.6', 14) === '5.2.6.1.5.3.3'
+                  ], expSet2 = [
+                    getResponse('5.6.19', 2)  === '5.2.6.1.1.3.5',
+                    getResponse('5.6.19', 5)  === '5.2.6.1.2.3.5',
+                    getResponse('5.6.19', 8)  === '5.2.6.1.3.3.5',
+                    getResponse('5.6.19', 11) === '5.2.6.1.4.3.5',
+                    getResponse('5.6.19', 14) === '5.2.6.1.5.3.5'
+                  ];
 
+                  if (any[expSet]) {
+                    return "No but scope to do so";
+                  } else if (any[expSet2]) {
+                    return "No and no scope to resolve";
+                  } else {
+                    return "Yes";
+                  }
                 }
               },
               {
                 "id":"7.5.3.4",
                 "label":"Have all substantive challenges associated with preserving the nutritional value of the target food during distribution and marketing been addressed?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('5.2.11', 2)  === '5.2.11.1.1.3.4',
+                    getResponse('5.2.11', 2)  === '5.2.11.1.1.3.3',
+                    getResponse('5.2.11', 5)  === '5.2.11.1.2.3.4',
+                    getResponse('5.2.11', 5)  === '5.2.11.1.2.3.3',
+                    getResponse('5.2.11', 8)  === '5.2.11.1.3.3.4',
+                    getResponse('5.2.11', 8)  === '5.2.11.1.3.3.3',
+                    getResponse('5.2.11', 11) === '5.2.11.1.4.3.4',
+                    getResponse('5.2.11', 11) === '5.2.11.1.4.3.3',
+                    getResponse('5.2.11', 14) === '5.2.11.1.5.3.4',
+                    getResponse('5.2.11', 14) === '5.2.11.1.5.3.3'
+                  ], expSet2 = [
+                    getResponse('5.6.11', 2)  === '5.2.11.1.1.3.5',
+                    getResponse('5.6.11', 5)  === '5.2.11.1.2.3.5',
+                    getResponse('5.6.11', 8)  === '5.2.11.1.3.3.5',
+                    getResponse('5.6.11', 11) === '5.2.11.1.4.3.5',
+                    getResponse('5.6.11', 14) === '5.2.11.1.5.3.5'
+                  ];
 
+                  if (any[expSet]) {
+                    return "No but scope to do so";
+                  } else if (any[expSet2]) {
+                    return "No and no scope to resolve";
+                  } else {
+                    return "Yes";
+                  }
                 }
               },
               {
                 "id":"7.5.3.5",
                 "label":"Have all substantive challenges associated with storing, transporting and processing the target food in value chains to these individuals been addressed?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('5.3.5', 2)  === '5.3.5.1.1.3.4',
+                    getResponse('5.3.5', 2)  === '5.3.5.1.1.3.3',
+                    getResponse('5.3.5', 5)  === '5.3.5.1.2.3.4',
+                    getResponse('5.3.5', 5)  === '5.3.5.1.2.3.3',
+                    getResponse('5.3.5', 8)  === '5.3.5.1.3.3.4',
+                    getResponse('5.3.5', 8)  === '5.3.5.1.3.3.3',
+                    getResponse('5.3.5', 11) === '5.3.5.1.4.3.4',
+                    getResponse('5.3.5', 11) === '5.3.5.1.4.3.3',
+                    getResponse('5.3.5', 14) === '5.3.5.1.5.3.4',
+                    getResponse('5.3.5', 14) === '5.3.5.1.5.3.3'
+                  ], expSet2 = [
+                    getResponse('5.3.5', 2)  === '5.3.5.1.1.3.5',
+                    getResponse('5.3.5', 5)  === '5.3.5.1.2.3.5',
+                    getResponse('5.3.5', 8)  === '5.3.5.1.3.3.5',
+                    getResponse('5.3.5', 11) === '5.3.5.1.4.3.5',
+                    getResponse('5.3.5', 14) === '5.3.5.1.5.3.5'
+                  ];
 
+                  if (any[expSet]) {
+                    return "No but scope to do so";
+                  } else if (any[expSet2]) {
+                    return "No and no scope to resolve";
+                  } else {
+                    return "Yes";
+                  }
                 }
               },
               {
                 "id":"7.5.3.6",
                 "label":"Have all substantive challenges associated with preserving the nutritional value of the target food during storage, transport and processing been addressed?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('5.3.10', 2)  === '5.3.10.1.1.3.4',
+                    getResponse('5.3.10', 2)  === '5.3.10.1.1.3.3',
+                    getResponse('5.3.10', 5)  === '5.3.10.1.2.3.4',
+                    getResponse('5.3.10', 5)  === '5.3.10.1.2.3.3',
+                    getResponse('5.3.10', 8)  === '5.3.10.1.3.3.4',
+                    getResponse('5.3.10', 8)  === '5.3.10.1.3.3.3',
+                    getResponse('5.3.10', 11) === '5.3.10.1.4.3.4',
+                    getResponse('5.3.10', 11) === '5.3.10.1.4.3.3',
+                    getResponse('5.3.10', 14) === '5.3.10.1.5.3.4',
+                    getResponse('5.3.10', 14) === '5.3.10.1.5.3.3'
+                  ], expSet2 = [
+                    getResponse('5.3.10', 2)  === '5.3.10.1.1.3.5',
+                    getResponse('5.3.10', 5)  === '5.3.10.1.2.3.5',
+                    getResponse('5.3.10', 8)  === '5.3.10.1.3.3.5',
+                    getResponse('5.3.10', 11) === '5.3.10.1.4.3.5',
+                    getResponse('5.3.10', 14) === '5.3.10.1.5.3.5'
+                  ];
 
+                  if (any[expSet]) {
+                    return "No but scope to do so";
+                  } else if (any[expSet2]) {
+                    return "No and no scope to resolve";
+                  } else {
+                    return "Yes";
+                  }
                 }
               },
               {
                 "id":"7.5.3.7",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all, pastValues) {
+                  var expSet = [
+                    pastValues['7.5.3.1'] === 'Yes',
+                    pastValues['7.5.3.2'] === 'Yes',
+                    pastValues['7.5.3.3'] === 'Yes',
+                    pastValues['7.5.3.4'] === 'Yes',
+                    pastValues['7.5.3.5'] === 'Yes',
+                    pastValues['7.5.3.6'] === 'Yes'
+                  ], expSet2 = [
+                    pastValues['7.5.3.1'] === 'No but scope to do so',
+                    pastValues['7.5.3.2'] === 'No but scope to do so',
+                    pastValues['7.5.3.3'] === 'No but scope to do so',
+                    pastValues['7.5.3.4'] === 'No but scope to do so',
+                    pastValues['7.5.3.5'] === 'No but scope to do so',
+                    pastValues['7.5.3.6'] === 'No but scope to do so'
+                  ], expSet3 = [
+                    pastValues['7.5.3.1'] === 'No and no scope to resolve',
+                    pastValues['7.5.3.2'] === 'No and no scope to resolve',
+                    pastValues['7.5.3.3'] === 'No and no scope to resolve',
+                    pastValues['7.5.3.4'] === 'No and no scope to resolve',
+                    pastValues['7.5.3.5'] === 'No and no scope to resolve',
+                    pastValues['7.5.3.6'] === 'No and no scope to resolve'
+                  ];
 
+                  if (all(expSet)) {
+                    return 'No action needed';
+                  }
+                  if (any(expSet2)) {
+                    return 'Explore options for resolving the remaining substantive challenges';
+                  } else if (any(expSet3)) {
+                    return 'Reconsider ability to make claims about nutritional impact of the intervention through increased consumption of the target food by target producer households';
+                  }
                 }
               }
             ]
@@ -7252,16 +8218,30 @@ Decide.STEP_DATA = [
                 "id":"7.5.4.1",
                 "label":"Are indicators of the nutritional impacts of the intervention on target producer households included in the monitoring and evaluation plan?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  if (getResponse('5.4.1', 0) === '5.4.1.1.1') {
+                    return 'Yes';
+                  } else if (getResponse('5.4.1', 0) === '5.4.1.1.2') {
+                    if (getResponse('5.4.3', 0) === '5.4.3.1.1') {
+                      return 'No but could do so';
+                    } else if (getResponse('5.4.3', 0) === '5.4.3.1.2') {
+                      return 'No and could not do so';
+                    }
+                  }
                 }
               },
               {
                 "id":"7.5.4.2",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all, pastValues) {
+                  if (pastValues['7.5.4.1'] === 'Yes') {
+                    return 'No action needed';
+                  } else if (pastValues['7.5.4.1'] === 'No and could not do so') {
+                    return 'Reconsider ability to make claims about nutritional impact of the intervention through increased consumption of the target food by target individuals';
+                  } else if (pastValues['7.5.4.1'] === 'No but could do so') {
+                    return 'Revise your monitoring and evaluation plan to include feasible nutritional indicators';
+                  }
                 }
               }
             ]
@@ -7278,56 +8258,117 @@ Decide.STEP_DATA = [
                 "id":"7.5.5.1",
                 "label":"Has an assessment of gender issues relating to consumption of the target food by these individuals been undertaken?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  if (getResponse('5.1.20', 0) === '5.1.20.1.1') {
+                    return 'Yes';
+                  } else if (getResponse('5.1.20', 0) === '5.1.20.1.2') {
+                    if (getResponse('5.1.21', 0) === '5.1.21.1.1') {
+                      return 'No but could do so';
+                    } else if (getResponse('5.1.21', 0) === '5.1.21.1.2') {
+                      return 'No and could not do so';
+                    }
+                  } 
                 }
               },
               {
                 "id":"7.5.5.2",
                 "label":"Have gender issues relating to consumption of the target food by these individuals been identified and, if so, have they been acted upon?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  if (getResponse('5.1.23', 0) === '5.1.23.1.1') {
+                    return 'No issues identified';
+                  } else if (getResponse('5.1.23', 0) === '5.1.23.1.2') {
+                    return 'Issues identified and acted upon';
+                  } else if (getResponse('5.1.23', 0) === '5.1.23.1.3') {
+                    return 'Issues identified but not acted upon';
+                  }
                 }
               },
               {
                 "id":"7.5.5.3",
                 "label":"Has an assessment of gender issues relating to distributing and marketing the target product in value chains to these individuals been undertaken?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  if (getResponse('5.2.19', 0) === '5.2.19.1.1') {
+                    return 'Yes';
+                  } else if (getResponse('5.2.19', 0) === '5.2.19.1.2') {
+                    if (getResponse('5.2.20', 0) === '5.2.20.1.1') {
+                      return 'No but could do so';
+                    } else if (getResponse('5.2.20', 0) === '5.2.20.1.2') {
+                      return 'No and could not do so';
+                    }
+                  }
                 }
               },
               {
                 "id":"7.5.5.4",
                 "label":"Have gender issues relating to distributing and marketing the target food in value chains to these individuals been identified and, if so, have they been acted upon?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  if (getResponse('5.2.22', 0) === '5.2.22.1.1') {
+                    return 'No issues identified';
+                  } else if (getResponse('5.2.22', 0) === '5.2.22.1.2') {
+                    return 'Issues identified and acted upon';
+                  } else if (getResponse('5.2.22', 0) === '5.2.22.1.3') {
+                    return 'Issues identified but not acted upon';
+                  }
                 }
               },
               {
                 "id":"7.5.5.5",
                 "label":"Has an assessment of gender issues relating to storing, transporting and processing the target food in value chains to these individuals been undertaken?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  if (getResponse('5.3.18', 0) === '5.3.18.1.1') {
+                    return 'Yes';
+                  } else if (getResponse('5.3.18', 0) === '5.3.18.1.2') {
+                    if (getResponse('5.3.19', 0) === '5.3.19.1.1') {
+                      return 'No but could do so';
+                    } else if (getResponse('5.3.19', 0) === '5.3.19.1.2') {
+                      return 'No and could not do so';
+                    }
+                  }
                 }
               },
               {
                 "id":"7.5.5.6",
                 "label":"Have gender issues relating to storing, transporting and processing the target food in value chains to these individuals been identified and, if so, have they been acted upon?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  if (getResponse('5.3.21', 0) === '5.3.21.1.1') {
+                    return 'Yes';
+                  } else if (getResponse('5.3.21', 0) === '5.3.21.1.2') {
+                    return 'No';
+                  }
                 }
               },
               {
                 "id":"7.5.5.7",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all, pastValues) {
+                  var expSet = [
+                    pastValues['7.5.5.1'] === 'No and could not do so',
+                    pastValues['7.5.5.3'] === 'No and could not do so',
+                    pastValues['7.5.5.5'] === 'No and could not do so'
+                  ], expSet2 = [
+                    pastValues['7.5.5.2'] === 'Issues identified but not acted upon',
+                    pastValues['7.5.5.4'] === 'Issues identified but not acted upon',
+                    pastValues['7.5.5.6'] === 'No'
+                  ], expSet3 = [
+                    pastValues['7.5.5.2'] === 'No issues identified',
+                    pastValues['7.5.5.2'] === 'Issues identified and acted upon',
+                    pastValues['7.5.5.4'] === 'No issues identified',
+                    pastValues['7.5.5.4'] === 'Issues identified and acted upon',
+                    pastValues['7.5.5.6'] === 'Yes'
+                  ];
+                  if (any(expSet)) {
+                    return 'Reconsider ability to make claims about gender issues associated with efforts to increase consumption of the target food by target producer households';
+                  } else if (any(expSet2)) {
+                    return 'Examine ways in which the identified gender issues can be addressed';
+                  } else if (any(expSet3)) {
+                    return 'No action needed';
+                  }
                 }
               }
             ]
@@ -7344,11 +8385,11 @@ Decide.STEP_DATA = [
                 "id":"7.5.6.1",
                 "label":"Have opportunities for mobilizing the private sector to address challenges relating to distributing and marketing the target food in value chains to these individuals been considered?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-                  if (responses['5.2.12'].answer[0].value === '5.2.12.1.1') {
+                "value" : function (step, getResponse, any, all) {
+                  if (getResponse('5.2.12', 0) === '5.2.12.1.1') {
                     return 'Yes';
-                  } else if (responses['5.2.12'].answer[0].value === '5.2.12.1.2') {
-                    if (responses['5.2.13'].answer[0].value === '5.2.13.1.1') {
+                  } else if (getResponse('5.2.12', 0) === '5.2.12.1.2') {
+                    if (getResponse('5.2.13', 0) === '5.2.13.1.1') {
                       return 'No but could do so';
                     } else {
                       return 'No and could not do so';
@@ -7360,32 +8401,63 @@ Decide.STEP_DATA = [
                 "id":"7.5.6.2",
                 "label":"Have any opportunities for private sector mobilization to address challenges relating to distributing and marketing the target food in value chains to these individuals been realised?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  if (getResponse('5.2.17', 0) === '5.2.17.1.1') {
+                    return 'Yes';
+                  } else if (getResponse('5.2.17', 0) === '5.2.17.1.2') {
+                    return 'No';
+                  }
                 }
               },
               {
                 "id":"7.5.6.3",
                 "label":"Have opportunities for mobilizing the private sector to address challenges relating to storing, transporting and processing the target food in value chains to these individuals been undertaken?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  if (getResponse('5.3.11', 0) === '5.3.11.1.1') {
+                    return 'Yes';
+                  } else if (getResponse('5.3.11', 0) === '5.3.11.1.2') {
+                    if (getResponse('5.3.12', 0) === '5.3.12.1.1') {
+                      return 'No but could do so';
+                    } else {
+                      return 'No and could not do so';
+                    }
+                  }
                 }
               },
               {
                 "id":"7.5.6.4",
                 "label":"Have any opportunities for private sector mobilization to address challenges relating to storing, transporting and processing the target food in value chains to these individuals been realised?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  if (getResponse('5.3.16', 0) === '5.3.16.1.1') {
+                    return 'Yes';
+                  } else if (getResponse('5.3.16', 0) === '5.3.16.1.2') {
+                    return 'No';
+                  }
                 }
               },
               {
                 "id":"7.5.6.5",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all, pastValues) {
+                  var expSet = [
+                    pastValues['7.5.6.1'] === 'Yes',
+                    pastValues['7.5.6.2'] === 'Yes',
+                    pastValues['7.5.6.3'] === 'Yes',
+                    pastValues['7.5.6.4'] === 'Yes'
+                  ];
+                  if (all(expSet)) {
+                    return 'No action needed';
+                  } else if (pastValues['7.5.6.2'] === 'No' || pastValues['7.5.6.4'] === 'No') {
+                    return 'Explore scope for pursuing identified opportunities for private sector engagement';
+                  }
+                  if (pastValues['7.5.6.1'] === 'No but could do so' || pastValues['7.5.6.3'] === 'No but could do so') {
+                    return 'Explore ways in which this evidence can be gathered';
+                  } else if (pastValues['7.5.6.1'] === 'No and could not do so' || pastValues['7.5.6.3'] === 'No and could not do so') {
+                    return 'Reconsider abiltiy to make claims about engagement with the private sector';
+                  }
                 }
               }
             ]
@@ -7411,32 +8483,80 @@ Decide.STEP_DATA = [
                 "id":"7.6.1.1",
                 "label":"Does the intervention target poor producer households?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  return getResponse('6.1', 0) || 'No';
                 }
               },
               {
                 "id":"7.6.1.2",
                 "label":"Do you know that individuals within target producer households will consume more nutrient-dense foods if their income and/or productivity is enhanced?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('6.5', 0) === '6.5.1.2',
+                    getResponse('6.6', 0) === '6.6.1.1'
+                  ], expSet2 = [
+                    getResponse('6.5', 0) === '6.5.1.2',
+                    getResponse('6.6', 0) === '6.6.1.2'
+                  ];
 
+                  if (getResponse('6.5', 0) === '6.5.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.6.1.3",
                 "label":"Do you know that the diet of some or all of the individuals in target producer households are nutritionally deficient?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('6.17', 0) === '6.17.1.2',
+                    getResponse('6.18', 0) === '6.18.1.1'
+                  ], expSet2 = [
+                    getResponse('6.17', 0) === '6.17.1.2',
+                    getResponse('6.18', 0) === '6.18.1.2'
+                  ];
 
+                  if (getResponse('6.17', 0) === '6.18.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.6.1.4",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all, pastValues) {
+                  var expSet = [
+                    pastValues['7.6.1.1'] === 'Yes',
+                    pastValues['7.6.1.2'] === 'Yes',
+                    pastValues['7.6.1.3'] === 'Yes'
+                  ], expSet2 = [
+                    pastValues['7.6.1.1'] === 'No but could do so',
+                    pastValues['7.6.1.2'] === 'No but could do so',
+                    pastValues['7.6.1.3'] === 'No but could do so'
+                  ], expSet3 = [
+                    pastValues['7.6.1.1'] === 'No and could not do so',
+                    pastValues['7.6.1.2'] === 'No and could not do so',
+                    pastValues['7.6.1.3'] === 'No and could not do so'
+                  ];
 
+                  if (all(expSet)) {
+                    return 'No action needed';
+                  } else if (any(expSet2)) {
+                    return 'Explore ways in which this evidence can be gathered';
+                  } else if (any(expSet3)) {
+                    return 'Reconsider ability to make claims about nutritional impact of the intervention through increased consumption of the target food on target individuals';
+                  }
                 }
               }
             ]
@@ -7453,16 +8573,36 @@ Decide.STEP_DATA = [
                 "id":"7.6.2.1",
                 "label":"Does the intervention include any specific efforts to encourage or facilitate increased consumption of nutrient-dense foods by individuals in target producer households?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('6.12', 0) === '6.12.1.2',
+                    getResponse('6.13', 0) === '6.13.1.1'
+                  ], expSet2 = [
+                    getResponse('6.12', 0) === '6.12.1.2',
+                    getResponse('6.13', 0) === '6.13.1.2'
+                  ];
 
+                  if (getResponse('6.12', 0) === '6.12.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.6.2.2",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all, pastValues) {
+                  if (pastValues['7.6.2.1'] === 'Yes') {
+                    return 'No action needed';
+                  } else if (pastValues['7.6.2.1'] === 'No but could do so') {
+                    return 'Explore ways in which specific efforts can be taken';
+                  } else if (pastValues['7.6.2.1'] === 'No and could not do so') {
+                    return 'Reconsider abiltiy to make claims about nutritional impact of the intervention through increased consumption of the target food by target individuals';
+                  }
                 }
               }
             ]
@@ -7479,16 +8619,36 @@ Decide.STEP_DATA = [
                 "id":"7.6.3.1",
                 "label":"Are indicators of the nutritional impact of the intervention on target producer households included in the monitoring and evaluation plan?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('6.22', 0) === '6.22.1.2',
+                    getResponse('6.24', 0) === '6.24.1.1'
+                  ], expSet2 = [
+                    getResponse('6.22', 0) === '6.22.1.2',
+                    getResponse('6.24', 0) === '6.24.1.2'
+                  ];
 
+                  if (getResponse('6.22', 0) === '6.22.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.6.3.2",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all, pastValues) {
+                  if (pastValues['7.6.3.1'] === 'Yes') {
+                    return 'No action needed';
+                  } else if (pastValues['7.6.3.1'] === 'No but could do so') {
+                    return 'Revise your monitoring and evaluation plan to include feasible nutritional indicators';
+                  } else if (pastValues['7.6.3.1'] === 'No and could not do so') {
+                    return 'Reconsider abiltiy to make claims about nutritional impact of the intervention through increased consumption of the target food by target individuals';
+                  }
                 }
               }
             ]
@@ -7505,24 +8665,52 @@ Decide.STEP_DATA = [
                 "id":"7.6.4.1",
                 "label":"Has an assessment of gender issues relating to the nutritional impacts of increased income and/or productivity in target producer households been undertaken?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('6.34', 0) === '6.34.1.2',
+                    getResponse('6.35', 0) === '6.35.1.1'
+                  ], expSet2 = [
+                    getResponse('6.34', 0) === '6.34.1.2',
+                    getResponse('6.35', 0) === '6.35.1.2'
+                  ];
 
+                  if (getResponse('6.34', 0) === '6.34.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.6.4.2",
                 "label":"Have gender issues relating to the nutritional impacts of increased income and/or productivity in target producer households been identified and, if so, have they been acted upon?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  return getResponse('6.37', 0);
                 }
               },
               {
                 "id":"7.6.4.3",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all, pastValues) {
+                  if (pastValues['7.6.4.1'] === 'No and could not do so') {
+                    return 'Reconsider ability to make claims about gender issues associated with efforts to increase consumption of the target food by target individuals';
+                  }
+                  if (pastValues['7.6.4.1'] === 'No but could do so') {
+                    return 'Examine how a gender assessment can be undertaken';
+                  }
+                  if (pastValues['7.6.4.2'] === 'Issues identified but not acted upon') {
+                    return 'Examine ways in which the identified gender issues can be addressed';
+                  }
+                  if (pastValues['7.6.4.2'] === 'Issues identified and not acted upon') {
+                    return 'No action needed';
+                  }
+                  if (pastValues['7.6.4.2'] === 'No issues idnetified') {
+                    return 'No action needed';
+                  }
                 }
               }
             ]
@@ -7539,24 +8727,48 @@ Decide.STEP_DATA = [
                 "id":"7.6.5.1",
                 "label":"Have any opportunities for mobilizing the private sector to address challenges relating to the nutritional impacts of increased income and/or productivity in target producer households been considered?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
+                "value" : function (step, getResponse, any, all) {
+                  var expSet = [
+                    getResponse('6.27', 0) === '6.27.1.2',
+                    getResponse('6.28', 0) === '6.28.1.1'
+                  ], expSet2 = [
+                    getResponse('6.27', 0) === '6.27.1.2',
+                    getResponse('6.28', 0) === '6.28.1.2'
+                  ];
 
+                  if (getResponse('6.27', 0) === '6.27.1.1') {
+                    return 'Yes';
+                  } else if (all(expSet)) {
+                    return 'No but could do so';
+                  } else if (all(expSet2)) {
+                    return 'No and could not do so';
+                  }
                 }
               },
               {
                 "id":"7.6.5.2",
                 "label":"Have any opportunities for private sector mobilization to address challenges relating to the nutritional impacts of increased income and/or productivity in target producer household been realised?",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  return getResponse('6.32', 0);
                 }
               },
               {
                 "id":"7.6.5.3",
                 "label":"Recommendation",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all, pastValues) {
+                  if (pastValues['7.6.5.1'] === 'Yes' && pastValues['7.6.5.1'] === 'Yes') {
+                    return 'Make sure no further actions could be taken';
+                  }
+                  if (pastValues['7.6.5.2'] === 'No') {
+                    return 'Explore scope for pursuing identified opportunities for private sector engagement';
+                  }
+                  if (pastValues['7.6.5.1'] === 'No but could do so') {
+                    return 'Explore ways in which this evidence can be gathered';
+                  } else if (pastValues['7.6.5.1'] === 'No and could not do so') {
+                    return 'Reconsider abiltiy to make claims about engagement with the private sector';
+                  }
                 }
               }
             ]
@@ -7574,40 +8786,50 @@ Decide.STEP_DATA = [
                 "id":"7.6.6.1",
                 "label":"1",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  if (getResponse('6.15', 2) === '6.15.1.1.3.1') {
+                    return getResponse('6.15', 0);
+                  }
                 }
               },
               {
                 "id":"7.6.6.2",
                 "label":"2",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  if (getResponse('6.15', 5) === '6.15.1.2.3.1') {
+                    return getResponse('6.15', 3);
+                  }
                 }
               },
               {
                 "id":"7.6.6.3",
                 "label":"3",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  if (getResponse('6.15', 8) === '6.15.1.3.3.1') {
+                    return getResponse('6.15', 6);
+                  }
                 }
               },
               {
                 "id":"7.6.6.4",
                 "label":"4",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  if (getResponse('6.15', 11) === '6.15.1.4.3.1') {
+                    return getResponse('6.15', 9);
+                  }
                 }
               },
               {
                 "id":"7.6.6.5",
                 "label":"5",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  if (getResponse('6.15', 14) === '6.15.1.5.3.1') {
+                    return getResponse('6.15', 12);
+                  }
                 }
               }
             ]
@@ -7627,40 +8849,40 @@ Decide.STEP_DATA = [
                 "id":"7.6.7.1",
                 "label":"1",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  return getResponse('6.16', 0);
                 }
               },
               {
                 "id":"7.6.7.2",
                 "label":"2",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  return getResponse('6.16', 1);
                 }
               },
               {
                 "id":"7.6.7.3",
                 "label":"3",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  return getResponse('6.16', 2);
                 }
               },
               {
                 "id":"7.6.7.4",
                 "label":"4",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  return getResponse('6.16', 3);
                 }
               },
               {
                 "id":"7.6.7.5",
                 "label":"5",
                 "type":"text",
-                "value" : function (step, responses, any, all) {
-
+                "value" : function (step, getResponse, any, all) {
+                  return getResponse('6.16', 4);
                 }
               }
             ]

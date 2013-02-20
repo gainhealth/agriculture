@@ -14,7 +14,7 @@ body {
 
 .main{
   max-width: 80em;
-  margin: 0 auto;
+  margin: 0 auto 2em auto;
   padding: 0;
   background-color: #efeff0;
   min-height: 60em;
@@ -29,6 +29,10 @@ body {
 
 .header .surveys {
   float:left;
+}
+
+.footer {
+  padding: 1.8em 1.2em 2em 1.2em;
 }
 
 .part,
@@ -145,6 +149,11 @@ caption,
 .title + .subtitle{
   margin-top:-1em;
 }
+.question .title + .subtitle{
+  margin-top:0em;
+  font-size:1.4em;
+  font-weight: normal;
+}
 
 .section .title{
   font-size:1.6em;
@@ -254,15 +263,22 @@ select {
   border:0;
   line-height:1;
   padding:0.5em 1.1em 0.4em;
-  margin:0 0 0 1.75em;
   color:white;
   border-radius:4px;
   display:inline-block;
   text-decoration:none;
 }
 
+.footer .button,
 .header .button {
   font-size:1.2em;
+}
+
+.header .button {
+  margin:0 0 0 1.75em;
+}
+.footer .button {
+  margin:0 1.75em 0 0;
 }
 
 .button[disabled]{
@@ -276,6 +292,7 @@ select {
   margin-top: 1em;
   background-color: #ed174f;
   font-size:1.3em;
+  cursor:pointer;
 }
 
 
@@ -464,6 +481,11 @@ textarea{
   padding: 0.3em;
   width: 27em;
   font-family: sans-serif;
+}
+
+#uid-7 label{
+  display:block;
+  margin-bottom:0.3em;
 }
 
 /************/
@@ -694,4 +716,26 @@ figcaption {
 	border-width: 1.75em;
 	top: 50%;
 	margin-top: -1.75em;
+}
+
+/* REPORT VIEW */
+
+#report .answer {
+  font-size : 1.4em;
+  min-height: 1.4em;
+  border: 1px solid #efeff0;
+  padding: 0.2em;
+}
+#report td .answer{
+  font-size:0.857em;
+}
+#report .tooltip {
+  display:none;
+}
+#report .header {
+  text-align: left;
+  color: white;
+}
+#report .header h1 {
+  font-size: 1.8em;
 }

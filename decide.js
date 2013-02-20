@@ -32,23 +32,25 @@ var Decide = (function (window, document, console) {
   //   callback - function  - called after templates and data are loaded, on init
 
   function Decide (container, steps, templates, options) {
-    var decide                 = this;
-    this.version               = '0.1';
-    this.events                = jQuery({});
-    this.steps                 = null;
-    this.firstStep             = null;
-    this.options               = options                    || {};
-    this.options.idPrefix      = this.options.idPrefix      || 'uid-';
-    this.options.selectDefault = this.options.selectDefault || 'Select';
-    this.options.buttonText    = this.options.buttonText    || 'Next >';
-    this.options.warning       = this.options.warning       || 'Please choose an option';
+    var decide                  = this;
+    this.version                = '0.2';
+    this.events                 = jQuery({});
+    this.steps                  = null;
+    this.firstStep              = null;
+    this.options                = options                     || {};
+    this.options.idPrefix       = this.options.idPrefix       || 'uid-';
+    this.options.startId        = this.options.startId        || '1';
+    this.options.stepsContainer = this.options.stepsContainer || 'stepsContainer';
+    this.options.selectDefault  = this.options.selectDefault  || 'Select';
+    this.options.buttonText     = this.options.buttonText     || 'Next >';
+    this.options.warning        = this.options.warning        || 'Please choose an option';
 
     this.getTemplates(templates, function (error, templates) {
       decide.steps = steps || Decide.STEP_DATA;
       if (!error) {
         decide.firstStep = decide.getFirstStep();
         decide.setup(decide.steps, container, templates);
-        decide.init();
+        decide.init(container);
       }
     });
 
@@ -68,8 +70,8 @@ var Decide = (function (window, document, console) {
       steps = this.getFlattenedSteps(steps);
 
       this.cacheManager = new CacheManager();
-      this.surveyView   = new SurveyView(this.events, container, templates, this.options);
       this.survey       = new Survey(steps, this.cacheManager, this.firstStep);
+      this.surveyView   = new SurveyView(this.events, container, templates, this.options);
 
       // Listen for view events
 
@@ -95,6 +97,10 @@ var Decide = (function (window, document, console) {
 
       this.surveyView.events.on('surveyView.changeSurvey', function (event, arg) {
         decide.survey.change(arg.surveyId);
+      });
+
+      this.surveyView.events.on('surveyView.updateResponses', function (event, arg) {
+        decide.survey.updateResponses(arg);
       });
 
       // Listen for model events
@@ -141,7 +147,7 @@ var Decide = (function (window, document, console) {
     // Calls back with a template object and possible error
     // as first callback argument
 
-    getTemplates: function getTemplates(templates, callback) {
+    getTemplates: function(templates, callback) {
       var decide = this;
       if (decide.options.test) { // pass data in directly
         callback(null, decide.constructTemplatesObject(templates));
@@ -157,7 +163,7 @@ var Decide = (function (window, document, console) {
     
     // Gets an object from the templates passed in and adds to that array
     // any templates found in the page
-    constructTemplatesObject : function constructTemplatesObject(data){
+    constructTemplatesObject : function(data){
       var decide = this,
           templatesArr = decide.createTemplatesObject(data),
           pageArr = decide.createTemplatesObject(document.body.innerHTML);
@@ -167,7 +173,7 @@ var Decide = (function (window, document, console) {
     // converts an html sting containing script elements into 
     // an array with an object for each template on the page.
     // each value is a string representation of the template html
-    createTemplatesObject : function createTemplatesObject(data){
+    createTemplatesObject : function(data){
       var templatesArr = [],
           templateElements = jQuery(data).filter('script[type="text/template"][id]')
             .each(function(i, script){
@@ -217,11 +223,13 @@ var Decide = (function (window, document, console) {
 
     // Draw first step within the container
 
-    init: function () {
+    init: function (container) {
       // Call back to show that data is loaded
       if(this.options.callback){
         this.options.callback();
       }
+      
+      jQuery(container).append('<div id="'+this.options.stepsContainer+'">');
       
       // Start
       if(!this.options.test){
@@ -230,7 +238,10 @@ var Decide = (function (window, document, console) {
         } else {
           this.survey.resumeFromCache();
         }
+        
+        this.surveyView.drawFooter();
       }
+
 
       // Emit a possible cacheUnavailable event for the SurveyView to catch
       this.survey.cache.init();
@@ -266,7 +277,9 @@ var Decide = (function (window, document, console) {
           "right":      "0",
           "font-size":  "1.6em",
           "padding":    "0.4em",
-          "background": "white"
+          "background": "white",
+          "overflow":   "auto",
+          "height":     "50%"
         })
         .appendTo('body');
 
@@ -350,24 +363,20 @@ var Decide = (function (window, document, console) {
         newStepParents = this.getStepParentsById(newStep.id);
         oldStepParents = lastDeepestStep ? this.getStepParentsById(lastDeepestStep.id) : [];
         this.prepareNextStep(newStep);
-
-        this.events.trigger('survey.answer', {
-          newStep:        newStep,
-          wasEdit:        false,
-        });
         
         this.events.trigger('survey.complete', {
           lastStep:       lastDeepestStep,
           newStepParents: newStepParents,
           oldStepParents: oldStepParents
         });
-      }
-      
-      
-      
-      
-      // Also draw detached steps (only if they are missing from history)
 
+        this.events.trigger('survey.answer', {
+          newStep:        newStep,
+          wasEdit:        false,
+        });
+      }
+
+      // Also draw detached steps (only if they are missing from history)
       this.triggerDetachedSteps(function (id) {
         return jQuery.inArray(id, history) > -1;
       });
@@ -396,17 +405,17 @@ var Decide = (function (window, document, console) {
         
         newStepParents = this.getStepParentsById(step.id);
         oldStepParents = lastDeepestStep ? this.getStepParentsById(lastDeepestStep.id) : [];
-
-        this.events.trigger('survey.answer', {
-          newStep:        step,
-          newStepParents: newStepParents,
-          wasEdit:        false
-        });
         
         this.events.trigger('survey.complete', {
           lastStep:       lastDeepestStep,
           newStepParents: newStepParents,
           oldStepParents: oldStepParents
+        });
+
+        this.events.trigger('survey.answer', {
+          newStep:        step,
+          newStepParents: newStepParents,
+          wasEdit:        false
         });
       }
     },
@@ -427,6 +436,7 @@ var Decide = (function (window, document, console) {
             condition = !filter(id, this.steps[id]);
           }
           if (condition) {
+            this.prepareNextStep(this.steps[id]);
             this.events.trigger('survey.answer', {
               newStep:        this.steps[id],
               newStepParents: this.getStepParentsById(this.steps[id].id),
@@ -467,9 +477,11 @@ var Decide = (function (window, document, console) {
         diverges = this.divergesHistory(lastAncestorStepId || id, arg.next);
       }
 
-      // Revise and store the history
+      // Revise and store the history but ignore if detached step
 
-      this.reviseHistory(lastAncestorStepId || id, diverges, edited);
+      if (!lastStep.detached) {
+        this.reviseHistory(lastAncestorStepId || id, diverges, edited);
+      }
 
       // Store responses
 
@@ -479,18 +491,19 @@ var Decide = (function (window, document, console) {
         this.prepareNextStep(nextStep);
 
         // Respond back to view
+        this.events.trigger('survey.complete', {
+          lastStep:       lastStep,
+          newStepParents: this.getStepParentsById(nextStep.id),
+          oldStepParents: this.getStepParentsById(id)
+        });
 
         this.events.trigger('survey.answer', {
           surveyId:       this.surveyId,
           wasEdit:        edited,
           newStep:        nextStep,
           lastStep:       lastStep,
-          diverges:       diverges
-        });
-        this.events.trigger('survey.complete', {
-          lastStep:       lastStep,
-          newStepParents: this.getStepParentsById(nextStep.id),
-          oldStepParents: this.getStepParentsById(id)
+          diverges:       diverges,
+          newStepParents: this.getStepParentsById(nextStep.id)
         });
       }
       else if (!lastStep.detached){
@@ -632,12 +645,23 @@ var Decide = (function (window, document, console) {
     // The evaluated function has context to the Survey instance
 
     evaluateProperty: function (obj, property, fn) {
-      var outcome = '';
+      var outcome = '',
+          survey  = this;
+
+      function getResponseSafely (stepId, answerIndex) {
+        if (survey.responses[stepId]) {
+          if (survey.responses[stepId].answer[answerIndex]) {
+            return survey.responses[stepId].answer[answerIndex].value;
+          }
+        }
+      }
+
       try {
-        outcome = fn(obj, this.responses, this.any, this.all, this.evaluatedValues);
+        outcome = fn(obj, getResponseSafely, this.any, this.all, this.evaluatedValues);
       } catch (e) {
         if (window.console){
-          window.console.log('Error when evaluating a function property for object: ' + obj);
+          window.console.log('Error when evaluating a function property for step id: ' + obj.id);
+          window.console.log(e.message);
         }
       }
       obj[property] = outcome;
@@ -682,7 +706,7 @@ var Decide = (function (window, document, console) {
     // Sets the latest survey id
 
     startNewSurvey: function (surveyName) {
-      this.surveyId = surveyName + ' - ' + new Date();
+      this.surveyId = surveyName + '-timeStampSeperator' + new Date();
 
       this.cache.addSurvey(this.surveyId);
       this.cache.setLatestSurveyId(this.surveyId);
@@ -753,20 +777,63 @@ var Decide = (function (window, document, console) {
       }
     },
 
+    // Update the responses object with any changed answers. This will be called
+    // when Save is clicked.
+
+    updateResponses: function (compiledResponses) {
+      for (var stepId in compiledResponses) {
+        this.setResponse(stepId, compiledResponses[stepId]);
+      }
+    },
+
     // Returns a report array with each entry containing an object 
     // with the question description and response(s) given
 
     generateReportArray: function () {
-      var survey = this;
-      return jQuery.map(this.history, function (stepId) {
-        if (step.type === 'question') {
-          var step = survey.getStepById(stepId);
-          return {
-            question: step.description,
-            answers:  survey.responses[stepId]
+    
+      var survey = this,
+          arr = [],
+          start = false;
+      jQuery.map(this.history, function (stepId) {
+        var step = survey.getStepById(stepId),
+            children = survey.getStepsDirectDescendants(step);
+            
+        getAnswer(step);
+        
+        jQuery.each(children, function(key, val){
+          getAnswer(val);
+        });
+        
+        function getAnswer (step){
+          var data = {
+            id : step.id,
+            type : step.type,
+            num : step.num || "",
+            title : step.title || ""
           };
+          if(step.items){ // it's a question
+            // TO DO for each item in the responses array for this id,
+            // if there is a value in the array corresponding to any item id,
+            // return its value. Unless it item.options, in which case return the 
+            // 'label' for this value (label for a radio, option.text for a select)
+            // Or item.type === 'html', in which case you'll have to return the responses object, or something similar.
+            data.items = jQuery.map(step.items, function(item){
+              var question = {
+                title : item.label,
+                num : item.num || ""
+              }
+              if(item.options){
+                question.value = ''
+              }else{
+                question.value = ''
+              }
+              return question;
+            });
+          }
+          arr.push( data);
         }
       });
+      return arr;
     },
 
     // Returns a step by its id
@@ -860,7 +927,6 @@ var Decide = (function (window, document, console) {
       }
       return !foundFalse;
     }
-
   };
 
   // ---------------------------------------------------
@@ -1057,14 +1123,16 @@ var Decide = (function (window, document, console) {
 
   function SurveyView (decide, container, templates, options) {
     this.events    = jQuery({});
+    this.selector  = container;
     this.container = jQuery(container);
     this.templates = templates;
     this.options   = options;
     this.surveyId  = null;
+    this.changedResponses = [];
     
     this.setupDecideEvents(decide);
     this.setupDomEvents();
-    this.drawGuiComponents();
+    this.drawNavigation();
   }
 
   SurveyView.prototype = {
@@ -1080,14 +1148,15 @@ var Decide = (function (window, document, console) {
         //     .wasEdit         - If the last answer counted as an edit
         //     .lastStep        - the last question answered
         //     .diverges        - the last q. diverges from the existing question 'path'
+        //     .newStepParents  - the steps ancestors from lowest to highest,
 
 
         if (arg.wasEdit && arg.diverges) {
           surveyView.clearStepsAfter(arg.lastStep);
-          surveyView.renderStep(arg.newStep);
+          surveyView.renderStep(arg.newStep, arg.newStepParents);
         }
         else if (arg.wasEdit === false) {
-          surveyView.renderStep(arg.newStep);
+          surveyView.renderStep(arg.newStep, arg.newStepParents);
         }
 
       });
@@ -1114,9 +1183,7 @@ var Decide = (function (window, document, console) {
 
       decide.on('decide.newSurvey', function (event, arg) {
         surveyView.setCurrentSurveyId(arg.surveyId);
-        surveyView.drawNewSurveyButton();
-        surveyView.drawDeleteButton();
-        surveyView.drawSurveySelect(arg.surveyIds);
+        surveyView.drawNavigation(arg.surveyIds);
       });
 
       decide.on('decide.delete', function (event, arg) {
@@ -1128,11 +1195,13 @@ var Decide = (function (window, document, console) {
         } 
 
         surveyView.clearSteps(arg.surveyIds);
+        surveyView.drawNavigation(arg.surveyIds);
       });
 
       decide.on('decide.change', function (event, arg) {
         surveyView.setCurrentSurveyId(arg.surveyId);
         surveyView.clearSteps(arg.surveyIds);
+        surveyView.drawNavigation(arg.surveyIds);
       });
 
       decide.on('decide.save', function (event, arg) {
@@ -1170,6 +1239,10 @@ var Decide = (function (window, document, console) {
       surveyView.container.on('change', 'select.surveys', function (e) {
         surveyView.handleSurveySelect(e.target);
       });
+
+      surveyView.container.on('change', 'select, textarea, input[type="checkbox"], input[type="text"], [data-type="radio"]', function (e) {
+        surveyView.handleStepChange(e.target);
+      })
     },
 
     setCurrentSurveyId: function (id) {
@@ -1179,11 +1252,9 @@ var Decide = (function (window, document, console) {
     // Clears the container and updates the visual state of the 
     // delete button and survey select
 
-    clearSteps: function (surveyIds) {
-      this.container.html('<nav class="header">');
-      this.drawNewSurveyButton();
-      this.drawDeleteButton();
-      this.drawSurveySelect(surveyIds);
+    clearSteps: function () {
+      jQuery('#'+this.options.stepsContainer).empty();
+      jQuery('.detached').remove();
     },
 
     changeSurvey: function (surveyId) {
@@ -1198,11 +1269,11 @@ var Decide = (function (window, document, console) {
     // - Survey create button
     // - Survey delete button
 
-    drawGuiComponents: function () {
+    drawNavigation: function (ids) {
       jQuery('nav', this.container).remove();
       jQuery(this.container).prepend('<nav class="header">');
       this.drawNewSurveyButton();
-      this.drawSurveySelect();
+      this.drawSurveySelect(ids);
       this.drawDeleteButton();
     },
 
@@ -1235,12 +1306,36 @@ var Decide = (function (window, document, console) {
           surveyView.markStepComplete(stepId); 
         }
         
-      }else{
+        this.removeFromChangedResponses(this.formatId(stepId));
+       }else{
         surveyView.renderFeedbackWarning(stepId);
       }
     },
 
-    getSurveyName : function getSurveyName(response){
+    handleSaveButton: function (target) {
+      // For each step that the user has edited, compile the response and update
+      // the survey.
+
+      var compiledResponses = {};
+      for (var i = 0; i < this.changedResponses.length; i++) {
+        var stepId    = this.changedResponses[i],
+            response  = {},
+            button    = jQuery('#'+stepId+' input[type="submit"]');
+
+        // TO DO refactor getNextStep & compileResponse so that they accept stepId
+        // rather than button element?
+        response.next = this.getNextStep(button[0]);
+        response = this.compileResponse(button[0], response);
+
+        response = {answer: response.answer, next: response.next};
+        compiledResponses[this.unformatId(stepId)] = response;
+      }
+
+      this.events.trigger('surveyView.updateResponses', compiledResponses);
+      this.changedResponses = [];
+    },
+
+    getSurveyName : function(response){
       var length = response.answer.length,
           answers = response.answer;
       // if the survey has not yet started
@@ -1278,27 +1373,36 @@ var Decide = (function (window, document, console) {
       this.events.trigger('surveyView.blankSurvey');
     },
 
+    handleStepChange: function (target) {
+      // Keeps track of which responses have changed so that when Save button is clicked we can update response object
+      var stepId = jQuery(target).closest('.question').attr('id');
+      if (jQuery.inArray(stepId, this.changedResponses) === -1) {
+        this.changedResponses.push(stepId);
+      }
+    },
+
     // Draws the survey select dropdown.
     //
     // If supplied with an array of survey ids it will 
     // add them to the select as options.
 
     drawSurveySelect: function (surveyIds) {
-      var select  = this.getTemplate('survey_select'),
-          option  = this.getTemplate('survey_select_option'),
-          options = this.getTemplate('survey_select_option_default'),
+      var select         = this.getTemplate('survey_select'),
+          option         = this.getTemplate('survey_select_option'),
+          options        = this.getTemplate('survey_select_option_default'),
+          stripTimestamp = this.stripTimestamp,
           latest;
 
-      if (surveyIds) {        
+      if (surveyIds) {
         if (surveyIds.length > 0) {
           if (this.surveyId) { // If surveyId set then clear "Untitled Survey"
             options = '';
           }
           latest = surveyIds.pop();
           surveyIds.sort();
-          options += tim(option, {value: latest, display: latest});
+          options += tim(option, {value: latest, display: stripTimestamp(latest)});
           jQuery.each(surveyIds, function (i, surveyId) {
-            options += tim(option, {value: surveyIds[i], display: surveyIds[i]});
+            options += tim(option, {value: surveyIds[i], display: stripTimestamp(surveyIds[i])});
           });
         }
       }
@@ -1342,25 +1446,118 @@ var Decide = (function (window, document, console) {
         jQuery('<div>').html(html).addClass('message-bar').prependTo(this.container);
       }
     },
+    
+    drawFooter: function drawFooter(){
+      var $footer = jQuery(tim(this.getTemplate('footer'))),
+          elements = [this.drawReportButton(), this.drawSaveButton()];
+          
+      jQuery.each(elements, function(element, value){
+        $footer.append(value);
+      })
+      this.container.append($footer );
+    },
+    
+    drawReportButton: function drawReportButton(){
+      var button = jQuery(tim(this.getTemplate('reportButton'))),
+          surveyView = this;
+      button.on('click', function(){
+        surveyView.renderReport(surveyView.compileReportData());
+        return false;
+      });
+      return button;
+    },
+    
+    drawSaveButton: function drawSaveButton(){
+      var button = jQuery(tim(this.getTemplate('saveButton'))),
+          surveyView = this;
+      button.on('click', function(){
+        surveyView.handleSaveButton();
+        return false;
+      });
+      return button;
+    },
+
+    compileReportData: function compileReportData(){
+      var contents = jQuery(this.container.clone()),
+          head = tim(this.getTemplate('htmlHead')),
+          wrapper = jQuery(tim(this.getTemplate('htmlBody'))),
+          surveyName,
+          html;
+      
+      // Append to a html wrapper
+      wrapper.find(this.selector).append(contents);
+      
+      wrapper.find('textarea').each(function(){
+        var $this = $(this);
+        $this.replaceWith('<p class="answer">'+$this.val().replace(/\n\r?/g, '<br />')+'</p>');
+      });
+      // Format header and footer
+      wrapper.find('.footer').remove();
+      surveyName = wrapper.find('.surveys option:selected').text();
+      wrapper.find('.header').html('<h1>'+surveyName+'</h1>');
+      wrapper.find('.survey-complete').remove();
+      
+      // Remove functional buttons
+      wrapper.find('input[type="submit"]').remove();
+      wrapper.find('.toggle').remove();
+      wrapper.find('.shut').removeClass('shut');
+      
+      // Reformat form elements as text
+      wrapper.find('input[type="text"]').each(function(){
+        var $this = $(this);
+        $this.replaceWith('<p class="answer">'+$this.val()+'</p>');
+      });
+      wrapper.find('[data-type="radio"]').each(function(){
+        var $this = $(this),
+            checked = $this.find('input[name='+$this.attr('data-id')+']:checked'),
+            label = $this.find('label[for="'+checked.attr('id')+'"]').text();
+        $this.find('.items').replaceWith('<p class="answer">'+label+'</p>');
+      });
+      wrapper.find('input[type="checkbox"]').each(function(){
+        // Failsafe for IE
+        if(this.getAttribute('CHECKED') === ''){
+          jQuery(this).prop('checked', true);
+        }
+      });
+      wrapper.find('select').each(function(){
+        var $this = $(this),
+            value = $this.val() === '-1' ? '' : $this.children("option").filter(":selected").text();
+        $this.replaceWith('<p class="answer">'+value+'</p>');
+      });
+      
+      // construct html
+      html = '<!DOCTYPE html><html lang="en"><head>';
+      html += head;
+      html += '</head><body>';
+      html += this.jQueryToString(wrapper);
+      html += '</body><html>';
+     
+      return html;
+    },
+    
+    renderReport : function renderReport(data){
+      var report = window.open("", '_blank', "location=no,menubar=yes,resizable=yes,scrollbars=yes,status=no,toolbar=yes,top=50,left=50,width=875,height=700");
+      report.document.write(data);
+    },
 
     // Derives the id of the next step to go to,
     // based on the data in this question
-    getNextStep : function getNextStep(button){
+    getNextStep : function(button){
       return button.getAttribute('data-next'); 
     },
     
-    getStepId : function getStepId (button){
+    getStepId : function(button){
       return button.parentNode.getAttribute('id');
     },
 
-    getLastAncestorStepId : function getLastAncestorStepId (button){
+    getLastAncestorStepId : function(button){
       return button.getAttribute('data-id');
     },
 
     // Looks through the mini 'form' for this step 
     // and compiles the response array of objects
     // response format: [{ id "2.1.1", value : "Yes" }, ...]
-    compileResponse : function compileResponse(button, response){    
+    compileResponse : function(button, response){    
       var surveyView = this;
       
           response.id = surveyView.unformatId(this.getStepId(button));
@@ -1372,23 +1569,52 @@ var Decide = (function (window, document, console) {
         var $this = jQuery(this),
             selected = $this.find(":selected"),
             next = selected.length ? selected[0] : this,
-            type = this.getAttribute('type') || this.getAttribute('data-type'),
+            type = this.getAttribute('type') || this.getAttribute('data-type') || this.tagName.toLowerCase(),
             id, checked, 
             item = { }; 
         
         next = next.getAttribute('data-next');
         
+        // For each item, the value needs not only to be found, but also SET as a property 
+        // within the HTML, in cases where the entire form is cloned, with its form data
         if(type === 'radio'){
+        
           id = this.getAttribute('data-id');
           item.id = surveyView.unformatId(id);
           checked = $this.find('[name='+id+']:checked');
           item.value = surveyView.unformatId(checked.attr('id'));
           next = checked.attr('data-next');
+          
         }else{
+        
           item.id = surveyView.unformatId($this.attr('id'));
-          item.value = (type === 'checkbox') ?
-                      Boolean(this.getAttribute('checked')) : 
-                      $this.val();
+          
+          if(type === 'checkbox'){
+            item.value =  $this.is(':checked');
+            
+            if(item.value === true){
+              this.setAttribute('CHECKED', '');
+            }else{
+              this.removeAttribute('CHECKED');
+            }
+          }
+          else if(type === 'text'){
+            item.value =  $this.val();
+            this.setAttribute('value', item.value);
+          }
+          else if(type === 'textarea'){
+            item.value =  $this.val();
+            $this.text(item.value)
+          }
+          else if(type === 'select'){
+            item.value =  $this.val();
+            $this.find('option[value="'+item.value+'"]').attr('selected', 'selected');
+          }
+          else{
+            item.value =  $this.val();
+            this.setAttribute('value', item.value);
+          }
+          
         }
         
         // Add in a answer dependent next question value
@@ -1402,7 +1628,7 @@ var Decide = (function (window, document, console) {
       return response;
     },
     
-    markStepComplete : function markStepComplete(id){
+    markStepComplete : function(id){
       if(!id){
         return;
       }
@@ -1411,7 +1637,7 @@ var Decide = (function (window, document, console) {
       this.events.trigger('surveyView.stepComplete', { 'id' : domId });
     },
     
-    markAncestorsComplete : function markAncestorsComplete(oldStepParents, newStepParents){
+    markAncestorsComplete : function(oldStepParents, newStepParents){
     var i, oldParent, olength = oldStepParents.length,
             oldId, newId,
             oldAncestors = oldStepParents.reverse(),
@@ -1428,6 +1654,12 @@ var Decide = (function (window, document, console) {
             this.markStepComplete(oldId);
           }
         }   
+    },
+
+    removeFromChangedResponses : function(stepId) {
+      this.changedResponses = jQuery.grep(this.changedResponses, function(value) {
+        return value != stepId;
+      });
     },
 
     // RENDERING
@@ -1452,15 +1684,18 @@ var Decide = (function (window, document, console) {
 
     // Renders a step into a parent jQuery collection
     
-    renderStep: function renderStep(step) {
-      var decide = this,
-          items = step.items,
+
+    renderStep: function(step) {
+      var items = step.items,
           steps = step.steps,
-          parent = step.parent ? jQuery("#" + this.formatId(step.parent)) : null, 
-          container = this.container,
+          parent = step.parent ? jQuery("#" + this.formatId(step.parent)) : null,
+          container,
+          stepsContainer = this.options.stepsContainer,
           thisStep = step,
           $detachedStep = jQuery('.detached'),
-          prevStep, $thisStep, $html, $control;
+          prevStep, $thisStep, $html, add;
+     
+      container = jQuery('#'+stepsContainer);
       
       // Add outer container
       $html = jQuery(this.renderItem(step));
@@ -1484,43 +1719,34 @@ var Decide = (function (window, document, console) {
               ).append(
                 this.createNextButton(items, thisStep.next, step.id, thisStep.buttonText)
               );
-      
+
       container = parent ? container.find(parent) : container;
       
       // Always render non-detached steps before detached steps
 
-      // aka: If there are detached steps on the page and the current step is 
+      // If there are detached steps on the page and the current step is 
       // not a detached step and the oldest ancestor
-      if ($detachedStep.length > 0 && !step.detached && !step.parent) {
-        $html.insertBefore($detachedStep.first());
-      }
-      else {
-        container.append($html);
-      }
+      
+      add = step.detached ? 'after' : 'append';
+      container[add]($html);
       
       // ensure custom html has updated values
       this.updateCustomHtml(items);
       
       if(step.detached){
         this.markStepComplete(step.id);
-      }else{
-        /* TODO: don't do this until last step on init */
-
-        $control = $html.find(':input:visible:enabled:first, [tabindex="-1"]').first();
-
-        // set focus on on first form element
-        $control.focus();
-
-        // scroll to the top of the step
-        window.setTimeout(function(){
-          decide.scrollToY($html[0]);
-        }, 4);
       }
+      else {
+        $html.find(':input:visible:enabled:first, [tabindex="-1"]').first().focus();
+      }
+      this.scrollToY($html[0]);
+
+      /* TODO: on resume from cache, the focus and scroll only needs to happen for the last step */
     },
     
     // renders an array of items which are then appended to 
     // an jquery collection 
-    renderItems: function renderItems(items) {  
+    renderItems: function(items) {  
       var html = "", itemHtml, item, length, container, $html= "", label;
       if(items){  
         length = items.length;
@@ -1552,7 +1778,7 @@ var Decide = (function (window, document, console) {
       return this.jQueryToString($html);
     },
     
-    renderOptions : function renderOptions(item, itemHtml){
+    renderOptions : function(item, itemHtml){
       var $item = jQuery(itemHtml),
           opts = item.options,
           isSelect = item.type === 'select',
@@ -1592,7 +1818,7 @@ var Decide = (function (window, document, console) {
       return this.jQueryToString($item);
     },
     
-    renderItem: function renderItem(step) {
+    renderItem: function(step) {
       var html = "",
           template = this.getTemplate(step);
       if(template){
@@ -1606,7 +1832,7 @@ var Decide = (function (window, document, console) {
     },
     
     // Adds a next button to a list of question items    
-    createNextButton : function createNextButton(items, next, id, buttonText){
+    createNextButton : function(items, next, id, buttonText){
       var template = this.getTemplate('next'),
           button = "";
           
@@ -1622,8 +1848,8 @@ var Decide = (function (window, document, console) {
       return button;
     },
     
-    updateCustomHtml : function updateCustomHtml(items){
-      var i, length, answer;
+    updateCustomHtml : function(items){
+      var i, length, answer, field;
       
       if(!items){
         return;
@@ -1639,7 +1865,14 @@ var Decide = (function (window, document, console) {
         length = item.answer.length
         for(i=0;i<length;i++){
           answer = item.answer[i];
-          jQuery('#'+this.formatId(answer.id)).val(answer.value);
+          field = jQuery('#'+this.formatId(answer.id))
+          field.val(answer.value);
+          if(field.is('textarea')){
+            field.text(answer.value);
+          }
+          if(field.is('select')){
+            field.find('option[value="'+answer.value+'"]').attr('selected', 'selected');
+          }
         }
       }
       
@@ -1648,7 +1881,7 @@ var Decide = (function (window, document, console) {
     // Fetches an HTML template string from the templates object
     // given a template identifier. This can be passed in as a string, 
     // or derived from the step object
-    getTemplate: function getTemplate(key){
+    getTemplate: function(key){
       var template = null,
           templates = this.templates;
       if(typeof key !== 'string'){    
@@ -1671,7 +1904,7 @@ var Decide = (function (window, document, console) {
     
     // Adds any additional/conditional formatting to a step
     // before rendering as html using tim.
-    formatTemplate : function formatTemplate(template, theStep) {
+    formatTemplate : function(template, theStep) {
       var $html, label,
           step = jQuery.extend(true, {}, theStep);
           
@@ -1700,12 +1933,12 @@ var Decide = (function (window, document, console) {
     
     // Get a sub-template to add to a jquery 'element'
     // position  - 'append', 'prepend', etc 
-    addCustomText : function addCustomText($el, template, position, obj){
+    addCustomText : function($el, template, position, obj){
       return $el[position](tim(this.getTemplate(template), obj));
     },
     
     // Add common text items to an item/step
-    addCommonTextItems : function addCommonTextItems($el, step){
+    addCommonTextItems : function($el, step){
       if(step.num){
         this.addCustomText($el, 'num', 'prepend', step);
       }
@@ -1717,7 +1950,7 @@ var Decide = (function (window, document, console) {
     
     // conditionally formats a jquery element containing a label,
     // adding instrutions and custom numbering
-    formatLabel : function formatLabel($html, step){
+    formatLabel : function($html, step){
       var label;
       if(step.label){
         label = $html.find('label');
@@ -1730,7 +1963,7 @@ var Decide = (function (window, document, console) {
     // TO DO  this should be generalised to an addContainerAndList function - 
     // The 'prompts' (list items) should be appended to the 'prompts' el, 
     // before it's appended to the $el
-    addPrompts : function addPrompts($el, obj, $container, position){
+    addPrompts : function($el, obj, $container, position){
       if(obj.prompts){
         this.addCustomText($container, 'prompts', position, obj);
         var length = obj.prompts.length,
@@ -1743,7 +1976,7 @@ var Decide = (function (window, document, console) {
     },
     
     // returns a string for a title section or an empty string
-    addHeader : function addHeader(step){
+    addHeader : function(step){
       var titleTemplate = 'title', title, overview, description;
           
       if(step.title || (step.type === 'radio')){  
@@ -1783,8 +2016,14 @@ var Decide = (function (window, document, console) {
       return "";
     },
     
+    // Returns a survey id string without the timestamp
+    // (The -timeStampSeperator is set in Survey.startNewSurvey)
+    stripTimestamp: function (surveyIdString) {
+      return surveyIdString.split('-timeStampSeperator')[0];
+    },
+
     // Removes . from id's to be used in html, and prepends with text
-    formatId : function formatId(id, prefix){
+    formatId : function(id, prefix){
       var idString = id;
       prefix = prefix || this.options.idPrefix;
       if(isNaN(idString.charAt(0)) === false){
@@ -1797,7 +2036,7 @@ var Decide = (function (window, document, console) {
     },
     
     // Reverses formatId
-    unformatId : function unformatId(id){
+    unformatId : function(id){
       if(id){
         if(id.indexOf(this.options.idPrefix) !== -1){
           id = id.substring(this.options.idPrefix.length);
@@ -1809,7 +2048,7 @@ var Decide = (function (window, document, console) {
       return id;
     },
     
-    jQueryToString : function jQueryToString($colln){
+    jQueryToString : function($colln){
       if($colln instanceof jQuery){
         return jQuery('<i>').append(($colln).clone()).html();
       }else {
@@ -1839,14 +2078,14 @@ var Decide = (function (window, document, console) {
       return valid;
     },
     
-    isValid : function isValid(item, option){
+    isValid : function(item, option){
       if(jQuery(item).find(option).length){
         return true;
       }
       return false;
     },
     
-    requiresValidation : function requiresValidation(id, sel, item){
+    requiresValidation : function(id, sel, item){
       var validate, 
           requiredItem = false;
       // get all containers
@@ -1896,7 +2135,7 @@ var Decide = (function (window, document, console) {
 
     // Present a warning as feedback under a step
 
-    renderFeedbackWarning: function renderFeedbackWarning(id) {
+    renderFeedbackWarning: function(id) {
       var item = jQuery('#' + id), warning;
       if(item.find('.warning').length === 0){
         warning = item.find('[data-required]').attr('data-required') || this.options.warning;
