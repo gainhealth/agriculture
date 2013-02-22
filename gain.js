@@ -1,11 +1,10 @@
-﻿var GAIN = (function(window, jQuery){
+﻿var GAIN = (function(window, jQuery, console){
   "use strict";
   var self = {};
-  window.console = window.console || {};
   
   self.ui = {
     init : function init(){
-        jQuery('body').delegate('.toggle', 'click', function(event) {
+        jQuery('body').on('click', '.toggle', function(event) {
           var button = jQuery(event.target),
               parent = button.parents('[data-complete]').first();
           if(parent.hasClass('shut')){
@@ -18,31 +17,32 @@
           }
         });   
     },
+
     shut : function shut(id){
       var $el = jQuery('#'+id),
+          isSection = $el.hasClass('section'),
           isQuestion = $el.hasClass('question'),
           firstChild = $el.children(':first'),
-          exceptions = [],
-          sel,
-          render = true;
-      
-      exceptions.push(
-       ($el.hasClass('section') && firstChild.hasClass('question')), 
-       (isQuestion && $el.hasClass('block')),
-       (isQuestion && firstChild.hasClass('items')),
-       (isQuestion && $el.hasClass('send-to-server'))
-      );
-    
-      
-      jQuery.each(exceptions, function(i){
-        if(exceptions[i]){
-          render = false;
-          return;
-        }
-      });
-      if(render){
-        $el.append('<button class="toggle">+</button>').addClass('shut');
+          firstChildIsQuestion = firstChild.hasClass('question');
+
+      /* TODO: consider moving the conditional logic to the 'surveyView.stepComplete' event handler and using shut() only to render the shut, not to decide when to do so. */
+      // Leave open under these conditions
+      if (
+        (isSection &&
+          firstChildIsQuestion) ||
+
+        (isQuestion && (
+          $el.hasClass('block') ||
+          firstChild.hasClass('items') ||
+          $el.hasClass('send-to-server')
+        ))
+      ){
+        return;
       }
+
+      // Shut
+      $el.addClass('shut')
+         .append('<button class="toggle">+</button>');
     }
   }
   
@@ -74,8 +74,9 @@
     },
     fail : function fail(obj, error){
       this.button.val('...Failed');
-      if(error.message){
-        console.log('message: ', error.message)
+      console.log('Send to Parse.com failed:')
+      for(var propertyName in error) {
+        console.log(propertyName +', '+error[propertyName])
       }
     },
     getData: function getData(){
@@ -115,16 +116,24 @@
               }
     */
     syncData : function syncData(data, callbacks) {
+      var parseClassName = 'AgricultureSurvey',
+          DataObject, query, myObject, id;
+          
       // Check the Parse wrapper is available
-      if (!window.Parse){
+      if (!Parse){
         return false;
       }
       Parse.initialize('LMMv1zyVhIVA2TpMBPGJCF7rcfgKj2FNGzgPNsLw',
                        'UbgbvSxlYgl1BjMZpQ3FGvc8J4kohG7b2R3ahHf5');
 
-      var parseClassName = 'AgricultureSurvey',
-          DataObject, query, myObject, id;
-
+      // Set to HTTP endpoint for IE, since IE errors on POSTing from
+      // an HTTP page to an HTTPS endpoint
+      // https://www.parse.com/questions/error-with-ms-ie9
+      /* TODO: check Ajax from HTTP -> HTTPS in latest IE */
+      if (jQuery.browser.msie){
+        Parse.serverURL = 'http://api.parse.com';
+      }
+      
       // Check we have valid data object
       if (Object.prototype.toString.call(data) !== '[object Object]') {
         return false;
@@ -183,6 +192,6 @@
   
   return self;
   
-})(this, jQuery);
+}(this, this.jQuery, this.console || {log:function(){}}));
 
   
