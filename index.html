@@ -816,7 +816,12 @@
     <div id="questions" class="wrapper"></div>
   </div>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" ></script>
-  <script src="gain-agriculture.min.js?v=6"></script>
+  <script>
+    if (!window.jQuery){
+      document.write('<script' + ' src="jquery-1.8.2.min.js"><' + '/script>');
+    }
+  </script>
+  <script src="gain-agriculture.min.js?v=7"></script>
   <script>
     var options = { startId : '0.1.1.1', callback: GAIN.init};
     if (location.hash === '#debug') { 
